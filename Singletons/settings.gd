@@ -7,7 +7,7 @@ extends Node
 # --------------------   RUN THE CODE    --------------------
 
 func _ready() -> void:
-	print(OS.get_latin_keyboard_variant())
+#	print(OS.get_latin_keyboard_variant())
 	pass
 
 # -------------------- DECLARE FUNCTIONS --------------------
