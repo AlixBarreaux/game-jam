@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Furniture",
 "class": "Dumpster",
 "language": "GDScript",
-"path": "res://Interactables/Furnitures/Dumpster/dumpster.gd"
+"path": "res://Interactables/Furnitures/Dumpster/furniture_dumpster.gd"
 }, {
 "base": "Spatial",
 "class": "Furniture",

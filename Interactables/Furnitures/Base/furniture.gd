@@ -22,5 +22,6 @@ func _ready() -> void:
 func _check_current_state() -> void:
 	pass
 
+
 func _on_Interactable_interaction_received() -> void:
 	print("Furniture ", self.name, "received interaction from zone.")
