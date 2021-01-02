@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Interactable",
 "language": "GDScript",
-"path": "res://Interactables/interactable.gd"
+"path": "res://Interactables/Zone/interactable_zone.gd"
 }, {
 "base": "RigidBody",
 "class": "Item",

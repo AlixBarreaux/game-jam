@@ -2,7 +2,7 @@ extends RayCast
 
 # -------------------- DECLARE VARIABLES --------------------
 
-var collider = null
+var collider : Spatial = self
 
 # --------------------  DECLARE SIGNALS  --------------------
 
