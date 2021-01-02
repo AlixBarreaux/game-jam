@@ -5,7 +5,7 @@ class_name Player
 # -------------------- DECLARE VARIABLES --------------------
 
 # Movement
-export var current_speed : float = 0.0
+export var current_speed : float = 10.0
 
 # Camera
 export var horizontal_look_sensitivity : float = 0.1
@@ -106,14 +106,6 @@ func get_input() -> void:
 	
 	velocity *= current_speed
 
-		# FIX DIAGONAL BACKWARD MOVEMENT: Backward takes over left and right
-		# Even though left and right still have a little influence
-		
-		# Add gravity and jump
-		
-		# Optimize code with Input.is_action_strengh() - Input.is_act..
-		# for vectors?
-
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -121,10 +113,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	# CHECK ALSO IF CURSOR SHOWN? If a GUI menu is opened
 	if event is InputEventMouseMotion:
-		# self.rotate_y(deg2rad(event.relative.x * MOUSE_SENSITIVITY * -1))
 		self.rotate_y(deg2rad(-event.relative.x * horizontal_look_sensitivity))
 		head.rotate_x(deg2rad(-event.relative.y * vertical_look_sensitivity))
-
 
 		# Clamp camera look to avoid funky rolling
 		head.rotation.x = clamp(head.rotation.x, deg2rad(min_look_up_angle), deg2rad(max_look_up_angle))

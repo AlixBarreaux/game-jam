@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/Interact_Raycast/interact_ray_cast.gd" type="Script" id=1]
+
+[node name="InteractRayCast" type="RayCast"]
+cast_to = Vector3( 0, 0, -20 )
+script = ExtResource( 1 )
