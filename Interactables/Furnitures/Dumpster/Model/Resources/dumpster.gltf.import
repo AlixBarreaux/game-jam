@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/dumpster.gltf-f54b1af479d5a8d0875bb8a867c7e0b8.scn"
+path="res://.import/dumpster.gltf-a63c88fb0bc1b9f8da3e1b260ccfa5c7.scn"
 
 [deps]
 
-source_file="res://Interactables/Furnitures/Dumpster/Model/dumpster.gltf"
-dest_files=[ "res://.import/dumpster.gltf-f54b1af479d5a8d0875bb8a867c7e0b8.scn" ]
+source_file="res://Interactables/Furnitures/Dumpster/Model/Resources/dumpster.gltf"
+dest_files=[ "res://.import/dumpster.gltf-a63c88fb0bc1b9f8da3e1b260ccfa5c7.scn" ]
 
 [params]
 

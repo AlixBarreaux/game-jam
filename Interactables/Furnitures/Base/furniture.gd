@@ -2,6 +2,15 @@ extends Spatial
 
 class_name Furniture
 
+"""
+Base class for the furniture, be it animated or not.
+Extend this scene when creating a new furniture.
+Save the exported blender scene as a Godot Scene and add it as a child to
+the Model Node here.
+If there are animations, add a script to the newly created furniture and extend
+from Furniture. Then bind the animations as you wish with your own functions.
+"""
+
 # -------------------- DECLARE VARIABLES --------------------
 
 onready var model : Spatial = $Model

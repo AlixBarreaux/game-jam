@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Interactables/Furnitures/Base/Model/model_dumpster.gd" type="Script" id=1]
+[ext_resource path="res://Interactables/Furnitures/Base/Model/model.gd" type="Script" id=1]
+
 
 [node name="Model" type="Spatial"]
 script = ExtResource( 1 )
