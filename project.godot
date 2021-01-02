@@ -74,6 +74,10 @@ interact={
 3d_physics/layer_2="Environment"
 3d_physics/layer_3="Interactables"
 
+[locale]
+
+translations=PoolStringArray( "res://Translations/General_Translations/general_translations.en_US.translation", "res://Translations/General_Translations/general_translations.fr_FR.translation", "res://Translations/General_Translations/general_translations.hi_IN.translation", "res://Translations/GUI_Translations/gui_translations.en_US.translation", "res://Translations/GUI_Translations/gui_translations.fr_FR.translation", "res://Translations/GUI_Translations/gui_translations.hi_IN.translation" )
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
