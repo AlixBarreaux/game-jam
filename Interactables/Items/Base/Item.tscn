@@ -8,7 +8,7 @@
 extents = Vector3( 0.05, 0.1, 0.04 )
 
 [sub_resource type="SphereShape" id=3]
-radius = 2.0
+radius = 0.236188
 
 [node name="Item" type="RigidBody"]
 script = ExtResource( 1 )
