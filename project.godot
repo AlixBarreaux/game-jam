@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "RigidBody",
 "class": "Item",
 "language": "GDScript",
-"path": "res://Interactables/Items/item.gd"
+"path": "res://Interactables/Items/Base/item.gd"
 }, {
 "base": "KinematicBody",
 "class": "Player",
