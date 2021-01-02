@@ -1,0 +1,29 @@
+[gd_scene format=2]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 452.0
+margin_top = 162.0
+margin_right = 495.0
+margin_bottom = 182.0
+text = "PLAY"
+
+[node name="OptionsButton" type="Button" parent="."]
+margin_left = 435.0
+margin_top = 232.0
+margin_right = 506.0
+margin_bottom = 252.0
+text = "OPTIONS"
+
+[node name="QuitButton" type="Button" parent="."]
+margin_left = 435.0
+margin_top = 303.0
+margin_right = 564.0
+margin_bottom = 323.0
+text = "QUIT TO DESKTOP"
