@@ -37,7 +37,7 @@ surfaces/0 = {
 resource_name = "DumpsterOpen"
 length = 0.625
 tracks/0/type = "transform"
-tracks/0/path = NodePath("Body/DumpsterOpener")
+tracks/0/path = NodePath("Body/Lid")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = true
@@ -50,7 +50,7 @@ tracks/0/keys = PoolRealArray( 0, 1, 0, 1.80695, -0.718549, 0.079329, 0, 0, 0.99
 mesh = SubResource( 1 )
 material/0 = null
 
-[node name="DumpsterOpener" type="MeshInstance" parent="Body"]
+[node name="Lid" type="MeshInstance" parent="Body"]
 transform = Transform( 1, 0, 0, 0, 0.987414, -0.158158, 0, 0.158158, 0.987414, 0, 1.80695, -0.718549 )
 mesh = SubResource( 2 )
 material/0 = null

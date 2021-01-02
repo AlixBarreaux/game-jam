@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Spatial",
+"class": "Furniture",
+"language": "GDScript",
+"path": "res://Interactables/Furnitures/Base/furniture.gd"
+}, {
 "base": "Node",
 "class": "Interactable",
 "language": "GDScript",
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://Player/player.gd"
 } ]
 _global_script_class_icons={
+"Furniture": "",
 "Interactable": "",
 "Item": "",
 "Player": ""
@@ -72,7 +78,9 @@ interact={
 
 3d_physics/layer_1="Player"
 3d_physics/layer_2="Environment"
-3d_physics/layer_3="Interactables"
+3d_physics/layer_3="InteractableZones"
+3d_physics/layer_4="ItemBodies"
+3d_physics/layer_5="FurnitureBodies"
 
 [locale]
 

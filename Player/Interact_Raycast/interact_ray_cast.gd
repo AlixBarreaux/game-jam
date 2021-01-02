@@ -2,6 +2,8 @@ extends RayCast
 
 # -------------------- DECLARE VARIABLES --------------------
 
+# The reference to the node the racast collides with
+# Set to self to avoid setting it to null
 var collider : Spatial = self
 
 # --------------------  DECLARE SIGNALS  --------------------
