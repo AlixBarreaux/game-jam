@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Interactables/Furnitures/Base/Furniture.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Interactables/Furnitures/Dumpster/furniture_dumpster.gd" type="Script" id=2]
+[ext_resource path="res://Interactables/Furnitures/Dumpster/Model/ModelDumpster.tscn" type="PackedScene" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.36, 0.948, 1 )
+
+[node name="FurnitureDumpster" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.924788, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ModelDumpster" parent="Model" index="0" instance=ExtResource( 3 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="Interactable" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.924788, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}

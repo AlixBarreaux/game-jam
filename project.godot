@@ -9,10 +9,20 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Furniture",
+"class": "Dumpster",
+"language": "GDScript",
+"path": "res://Interactables/Furnitures/Dumpster/furniture_dumpster.gd"
+}, {
+"base": "Spatial",
+"class": "Furniture",
+"language": "GDScript",
+"path": "res://Interactables/Furnitures/Base/furniture.gd"
+}, {
 "base": "Node",
 "class": "Interactable",
 "language": "GDScript",
-"path": "res://Interactables/interactable.gd"
+"path": "res://Interactables/Zone/interactable_zone.gd"
 }, {
 "base": "RigidBody",
 "class": "Item",
@@ -25,6 +35,8 @@ _global_script_classes=[ {
 "path": "res://Player/player.gd"
 } ]
 _global_script_class_icons={
+"Dumpster": "",
+"Furniture": "",
 "Interactable": "",
 "Item": "",
 "Player": ""
