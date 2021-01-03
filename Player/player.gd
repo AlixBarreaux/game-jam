@@ -102,9 +102,11 @@ func get_input() -> void:
 	else:
 		is_moving = false
 
+	velocity *= current_speed
 
 	
-	velocity *= current_speed
+	if Input.is_action_just_pressed("drop_item"):
+		PlayerItemList.drop_item()
 
 
 

@@ -24,22 +24,33 @@ transform = Transform( 20, 0, 0, 0, 0.5, 0, 0, 0, 20, 0, -0.5, 0 )
 collision_layer = 2
 
 [node name="MeshInstance" type="MeshInstance" parent="Environment/Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00876541, 0.425082, -0.0119695 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Environment/Floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="Items" type="Spatial" parent="."]
 
 [node name="ItemBanana" parent="Items" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.312232, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31223, -5 )
+collision_layer = 1
+collision_mask = 1
+
+[node name="ItemBanana2" parent="Items" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.312232, -5 )
 collision_layer = 1
 collision_mask = 1
 
 [node name="ItemCarrot" parent="Items" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.242689, -5 )
+collision_layer = 1
+collision_mask = 1
+
+[node name="ItemCarrot2" parent="Items" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.242689, -5 )
 collision_layer = 1
 collision_mask = 1
 
