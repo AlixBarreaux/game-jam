@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Interactables/Storages/Base/Storage.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Interactables/Items/Baguette/Baguette.tscn" type="PackedScene" id=2]
+
+[node name="StorageBaguette" instance=ExtResource( 1 )]
+accepted_item_id = 10
+item_model_resource = ExtResource( 2 )
