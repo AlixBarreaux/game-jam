@@ -43,6 +43,7 @@ func pickup_item(item) -> bool:
 
 
 onready var world : Spatial = get_tree().get_root().get_node("Main/World")
+onready var world_items_node : Spatial = world.get_node("Items")
 onready var player = world.get_node("Player")
 func drop_item() -> void:
 	if current_item_amount > -1 and carried_items_ids.size() > 0:
@@ -72,7 +73,7 @@ func drop_item() -> void:
 			
 		var instance = pre_instance.instance()
 		instance.transform.origin = player.transform.origin + Vector3(0, 5, 0)
-		world.add_child(instance)
+		world_items_node.add_child(instance)
 		print(instance)
 		
 		carried_items_ids.remove(carried_items_ids.size() - 1)
