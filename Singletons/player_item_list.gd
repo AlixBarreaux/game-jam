@@ -77,3 +77,12 @@ func drop_item() -> void:
 		
 		carried_items_ids.remove(carried_items_ids.size() - 1)
 		current_item_amount -= 1
+
+
+# Delete item without dropping it into the world
+func remove_item_from_inventory(index: int) -> void:
+	print("Before change: ", carried_items_ids)
+	carried_items_ids.remove(index)
+	current_item_amount -= 1
+	print("Remove in singleton! Carried item ids: ", carried_items_ids)
+	print("Current_item_amount: ", current_item_amount)
