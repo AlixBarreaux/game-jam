@@ -11,6 +11,10 @@ var carried_items_ids : PoolIntArray = []
 
 var banana = preload("res://Interactables/Items/Banana/ItemBanana.tscn")
 var carrot = preload("res://Interactables/Items/Carrot/ItemCarrot.tscn")
+var canned_peas = preload("res://Interactables/Items/Canned_Peas/ItemCannedPeas.tscn")
+var egg_carton_full = preload("res://Interactables/Items/Egg_Carton_Full/ItemEggCartonFull.tscn")
+var milk = preload("res://Interactables/Items/Milk/ItemMilk.tscn")
+var potato = preload("res://Interactables/Items/Potato/ItemPotato.tscn")
 
 # --------------------  DECLARE SIGNALS  --------------------
 
@@ -45,11 +49,17 @@ func drop_item() -> void:
 		var pre_instance = null
 		match carried_items_ids[carried_items_ids.size() - 1]:
 			1:
-				print("Banana!")
 				pre_instance = banana
 			2:
-				print("Carrot!")
 				pre_instance = carrot
+			3:
+				pre_instance = canned_peas
+			4:
+				pre_instance = egg_carton_full
+			5:
+				pre_instance = milk
+			6:
+				pre_instance = potato
 			_:
 				print("_!")
 				return
