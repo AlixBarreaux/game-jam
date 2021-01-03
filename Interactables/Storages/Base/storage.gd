@@ -1,4 +1,4 @@
-extends StaticBody
+extends Spatial
 
 class_name Storage
 
@@ -29,7 +29,7 @@ func spawn_item() -> void:
 
 
 func _on_InteractZone_interaction_received() -> void:
-	print("Someone wants to put an item in my ass: ", self.name)
+	print("Someone wants to put an item in me: ", self.name)
 	print(PlayerItemList.carried_items_ids)
 	
 	var item_to_remove_index : int = -1

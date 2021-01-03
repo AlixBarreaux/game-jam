@@ -34,10 +34,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Player/player.gd"
 }, {
-"base": "StaticBody",
+"base": "Spatial",
 "class": "Storage",
 "language": "GDScript",
-"path": "res://Interactables/storage.gd"
+"path": "res://Interactables/Storages/Base/storage.gd"
 } ]
 _global_script_class_icons={
 "Dumpster": "",
