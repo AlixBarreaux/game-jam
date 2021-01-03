@@ -15,6 +15,8 @@ var canned_peas = preload("res://Interactables/Items/Canned_Peas/ItemCannedPeas.
 var egg_carton_full = preload("res://Interactables/Items/Egg_Carton_Full/ItemEggCartonFull.tscn")
 var milk = preload("res://Interactables/Items/Milk/ItemMilk.tscn")
 var potato = preload("res://Interactables/Items/Potato/ItemPotato.tscn")
+var tomato = preload("res://Interactables/Items/Tomato/ItemTomato.tscn")
+var watermelon = preload("res://Interactables/Items/Watermelon/ItemWatermelon.tscn")
 
 # --------------------  DECLARE SIGNALS  --------------------
 
@@ -60,6 +62,10 @@ func drop_item() -> void:
 				pre_instance = milk
 			6:
 				pre_instance = potato
+			7:
+				pre_instance = tomato
+			8:
+				pre_instance = watermelon
 			_:
 				print("_!")
 				return

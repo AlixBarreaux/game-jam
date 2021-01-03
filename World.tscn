@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Items/Banana/ItemBanana.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Interactables/Items/Egg_Carton_Full/ItemEggCartonFull.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Interactables/Items/Milk/ItemMilk.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Interactables/Items/Potato/ItemPotato.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Interactables/Items/Watermelon/ItemWatermelon.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Interactables/Items/Tomato/ItemTomato.tscn" type="PackedScene" id=10]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.345098, 0.345098, 0.345098, 1 )
@@ -33,7 +35,6 @@ mesh = SubResource( 2 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Environment/Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="Items" type="Spatial" parent="."]
@@ -69,6 +70,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4 )
 
 [node name="ItemPotato" parent="Items" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4 )
+
+[node name="ItemTomato" parent="Items" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3 )
+
+[node name="ItemWatermelon" parent="Items" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.73466, 0, -2.36111 )
 
 [node name="Furnitures" type="Spatial" parent="."]
 

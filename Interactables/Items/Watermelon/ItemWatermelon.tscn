@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Interactables/Items/Base/Item.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Interactables/Items/Watermelon/Watermelon.tscn" type="PackedScene" id=2]
+
+[sub_resource type="SphereShape" id=3]
+radius = 0.113833
+
+[sub_resource type="SphereShape" id=2]
+radius = 0.193695
+
+[node name="ItemWatermelon" instance=ExtResource( 1 )]
+id = 8
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.120863, 0 )
+shape = SubResource( 3 )
+
+[node name="Watermelon" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="InteractableZone" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0208629, 0 )
+shape = SubResource( 2 )
