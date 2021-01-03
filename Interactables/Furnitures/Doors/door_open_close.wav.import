@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/door_open_close.wav-769b63c35f1c094365ae24d9d7c50a22.sample"
+
+[deps]
+
+source_file="res://Interactables/Furnitures/Doors/door_open_close.wav"
+dest_files=[ "res://.import/door_open_close.wav-769b63c35f1c094365ae24d9d7c50a22.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
