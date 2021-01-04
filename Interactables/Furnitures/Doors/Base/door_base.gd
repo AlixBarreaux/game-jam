@@ -32,6 +32,20 @@ func on_interaction_received() -> void:
 	check_if_player_has_key()
 
 
+func _check_current_state() -> void:
+	match current_state:
+		STATES.CLOSED:
+#			model.animation_player.play(model.animation_list[0])
+			self.current_state = STATES.OPENED
+			WorldEvents.door_closed_amount -= 1
+		STATES.OPENED:
+#			model.animation_player.play_backwards(model.animation_list[0])
+			self.current_state = STATES.CLOSED
+			WorldEvents.door_closed_amount += 1
+		_:
+			printerr("(!) ERROR in: ", self.name, " in method: check_current_state()")
+
+
 func check_if_player_has_key() -> void:
 	for key in PlayerItemList.carried_keys_ids:
 		if key == self.required_key_id:

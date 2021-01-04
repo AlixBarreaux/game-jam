@@ -64,6 +64,7 @@ config/icon="res://icon.png"
 
 Settings="*res://Singletons/settings.gd"
 PlayerItemList="*res://Singletons/player_item_list.gd"
+WorldEvents="*res://Singletons/world_events.gd"
 
 [input]
 
