@@ -21,12 +21,14 @@ var watermelon = preload("res://Interactables/Items/Watermelon/ItemWatermelon.ts
 var strawberry = preload("res://Interactables/Items/Strawberry/ItemStrawberry.tscn")
 var baguette = preload("res://Interactables/Items/Baguette/ItemBaguette.tscn")
 
+
+onready var world : Spatial = get_tree().get_root().get_node("Main/World")
+onready var world_items_node : Spatial = world.get_node("Items")
+onready var player = world.get_node("Player")
+
 # --------------------  DECLARE SIGNALS  --------------------
 
 # --------------------   RUN THE CODE    --------------------
-
-func _ready() -> void:
-	pass
 
 # -------------------- DECLARE FUNCTIONS --------------------
 
@@ -45,9 +47,7 @@ func pickup_item(item) -> bool:
 
 
 
-onready var world : Spatial = get_tree().get_root().get_node("Main/World")
-onready var world_items_node : Spatial = world.get_node("Items")
-onready var player = world.get_node("Player")
+
 func drop_item() -> void:
 	if current_item_amount > -1 and carried_items_ids.size() > 0:
 		print(carried_items_ids)
@@ -77,7 +77,6 @@ func drop_item() -> void:
 			_:
 				print("_!")
 				return
-			
 		var instance = pre_instance.instance()
 		instance.transform.origin = player.transform.origin + Vector3(0, 5, 0)
 		world_items_node.add_child(instance)

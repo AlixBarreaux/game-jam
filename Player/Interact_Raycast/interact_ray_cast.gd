@@ -20,8 +20,8 @@ func _physics_process(_delta : float) -> void:
 		if collider.has_method("receive_interaction"):
 			self.enabled = false
 			collider.receive_interaction()
-		else:
-			printerr("(!) ERROR: Collider doesn't have method receive_interaction!")
+#		else:
+#			printerr("(!) ERROR: Collider doesn't have method receive_interaction!")
 
 
 func _unhandled_key_input(_event: InputEventKey) -> void:

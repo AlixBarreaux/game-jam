@@ -21,6 +21,7 @@ var direction : Vector3 = Vector3(0, 0, 0)
 var velocity : Vector3 = Vector3(0, 0, 0)
 
 var is_moving : bool = false
+var inputs_enabled : bool = false
 
 
 onready var head : Spatial = $Head
@@ -37,7 +38,7 @@ func _ready() -> void:
 
 	initialize_asserts()
 
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+#	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 func _physics_process(_delta : float) -> void:
@@ -60,7 +61,9 @@ func initialize_asserts() -> void:
 func get_input() -> void:
 	direction = Vector3(0, 0, 0)
 	velocity = Vector3(0, 0, 0)
-
+	
+	if not inputs_enabled:
+		return
 
 	# Sprint Toggle
 	if Input.get_action_strength("sprint"):

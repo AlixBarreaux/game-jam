@@ -62,7 +62,7 @@ func check_if_player_has_key() -> void:
 				print("The player doesn't have the key to open or close me: ", self.name)
 	else:
 		_check_current_state()
-		print("Not key required, opening or closing!")
+		print("No key required, opening or closing!")
 
 
 func open() -> void:

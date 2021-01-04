@@ -35,12 +35,10 @@ shape = SubResource( 4 )
 
 [node name="DoubleDoor" parent="Model" index="0" instance=ExtResource( 2 )]
 
-[node name="DoorLeft" parent="Model/DoubleDoor" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
 [node name="CollisionShape" type="CollisionShape" parent="Interactable" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07324, 0 )
 shape = SubResource( 10 )
+disabled = true
 [connection signal="body_entered" from="AutomaticDoorDetector" to="AutomaticDoorDetector" method="_on_AutomaticDoorDetector_body_entered"]
 [connection signal="body_exited" from="AutomaticDoorDetector" to="AutomaticDoorDetector" method="_on_AutomaticDoorDetector_body_exited"]
 
