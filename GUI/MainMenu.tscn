@@ -1,8 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://GUI/Buttons/QuitToDesktopButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GUI/main_menu.gd" type="Script" id=2]
-[ext_resource path="res://GUI/Options_GUI/OptionsGUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GUI/Credits/GUICredits.tscn" type="PackedScene" id=3]
+
+[sub_resource type="InputEventJoypadButton" id=5]
+button_index = 11
+
+[sub_resource type="ShortCut" id=6]
+shortcut = SubResource( 5 )
+
+[sub_resource type="InputEventKey" id=7]
+scancode = 67
+
+[sub_resource type="ShortCut" id=8]
+shortcut = SubResource( 7 )
+
+[sub_resource type="InputEventAction" id=4]
+action = "ui_cancel"
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 4 )
 
 [sub_resource type="Animation" id=1]
 resource_name = "VersionLabelAlphaModulate"
@@ -27,12 +45,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="REMOVEIT" type="Label" parent="."]
-margin_left = 800.0
-margin_top = 270.0
-margin_right = 840.0
-margin_bottom = 284.0
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
@@ -49,44 +61,37 @@ __meta__ = {
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
 margin_right = 324.0
-margin_bottom = 34.0
+margin_bottom = 66.0
 focus_neighbour_left = NodePath("../QuitToDesktopButton")
 focus_neighbour_top = NodePath("../QuitToDesktopButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
+shortcut = SubResource( 6 )
 text = "PLAY"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
-margin_top = 94.0
-margin_right = 324.0
-margin_bottom = 129.0
-focus_neighbour_top = NodePath("../PlayButton")
-focus_neighbour_bottom = NodePath("../CreditsButton")
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "OPTIONS"
-
 [node name="CreditsButton" type="Button" parent="VBoxContainer"]
-margin_top = 189.0
+margin_top = 126.0
 margin_right = 324.0
-margin_bottom = 223.0
-focus_neighbour_top = NodePath("../OptionsButton")
+margin_bottom = 192.0
+focus_neighbour_top = NodePath("../PlayButton")
 focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
+shortcut = SubResource( 8 )
 text = "CREDITS"
 
 [node name="QuitToDesktopButton" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 283.0
+margin_top = 252.0
 margin_right = 324.0
 margin_bottom = 318.0
 focus_neighbour_top = NodePath("../CreditsButton")
 focus_neighbour_bottom = NodePath("../PlayButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
+shortcut = SubResource( 3 )
 
 [node name="TitleLabel" type="Label" parent="."]
 anchor_left = 0.5
@@ -98,6 +103,9 @@ margin_bottom = 14.0
 text = "Terrible Mess in the Store"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VersionLabel" type="Label" parent="."]
 self_modulate = Color( 1, 1, 1, 0.985975 )
@@ -119,9 +127,10 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/VersionLabelAlphaModulate = SubResource( 1 )
 
-[node name="OptionsGUI" parent="." instance=ExtResource( 3 )]
+[node name="GUICredits" parent="." instance=ExtResource( 3 )]
 visible = false
 [connection signal="visibility_changed" from="." to="." method="_on_MainMenu_visibility_changed"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="visibility_changed" from="GUICredits" to="." method="_on_GUICredits_visibility_changed"]

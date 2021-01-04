@@ -12,7 +12,6 @@ signal game_launched
 
 func _ready() -> void:
 	_on_AnimationPlayer_animation_finished("VersionLabelAlphaModulate")
-	$REMOVEIT.text = TranslationServer.get_locale_name(TranslationServer.get_locale())
 
 # -------------------- DECLARE FUNCTIONS --------------------
 
@@ -22,8 +21,8 @@ func _on_PlayButton_pressed() -> void:
 	emit_signal("game_launched")
 
 
-func _on_OptionsButton_pressed() -> void:
-	pass # Replace with function body.
+func _on_CreditsButton_pressed() -> void:
+	$GUICredits.show()
 
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
@@ -35,10 +34,17 @@ func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 		$AnimationPlayer.play(anim_name)
 		
 
-
+# Self Visibility changed
 func _on_MainMenu_visibility_changed() -> void:
 	if self.visible:
 		$VBoxContainer/PlayButton.grab_focus()
 	else:
 		$VBoxContainer/PlayButton.release_focus()
+		for child in self.get_children():
+			if not child is AnimationPlayer:
+				child.release_focus()
 		
+
+
+func _on_GUICredits_visibility_changed() -> void:
+	$VBoxContainer/PlayButton.grab_focus()

@@ -1,0 +1,133 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GUI/Credits/gui_credits.gd" type="Script" id=1]
+
+[sub_resource type="InputEventAction" id=1]
+action = "ui_cancel"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[node name="GUICredits" type="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -353.5
+margin_top = -207.0
+margin_right = 353.5
+margin_bottom = 207.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsLabel" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 22.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "CREDITS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -207.5
+margin_top = -124.0
+margin_right = 208.5
+margin_bottom = 125.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+margin_right = 416.0
+margin_bottom = 249.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+margin_right = 416.0
+margin_bottom = 222.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_right = 416.0
+margin_bottom = 82.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Terrible Mess in the Store... (and the code!)
+
+This game has been created for the Dani's Basement Jam 2.
+
+3D Models :"
+align = 3
+valign = 3
+
+[node name="GurjasStudioLinkButton" type="LinkButton" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 86.0
+margin_right = 416.0
+margin_bottom = 100.0
+text = "Gurjas Studio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 104.0
+margin_right = 416.0
+margin_bottom = 135.0
+text = "
+Game Design / Level Design / Programming :"
+
+[node name="CtnPhacoLinkButton" type="LinkButton" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 139.0
+margin_right = 416.0
+margin_bottom = 153.0
+text = "CTN Phaco"
+
+[node name="Label3" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 157.0
+margin_right = 416.0
+margin_bottom = 222.0
+text = "
+We have to confess, the code is a mess due to time constraints.
+We still hope you had fun playing this game as much as we loved
+making it together!"
+
+[node name="BackButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -114.5
+margin_top = -82.0
+margin_right = 109.5
+margin_bottom = -41.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+shortcut = SubResource( 2 )
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="visibility_changed" from="." to="." method="_on_GUICredits_visibility_changed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/VBoxContainer/GurjasStudioLinkButton" to="." method="_on_GurjasStudioLinkButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/VBoxContainer/CtnPhacoLinkButton" to="." method="_on_CtnPhacoLinkButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
