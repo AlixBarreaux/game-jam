@@ -12,6 +12,7 @@ signal game_launched
 
 func _ready() -> void:
 	_on_AnimationPlayer_animation_finished("VersionLabelAlphaModulate")
+	$REMOVEIT.text = TranslationServer.get_locale_name(TranslationServer.get_locale())
 
 # -------------------- DECLARE FUNCTIONS --------------------
 
