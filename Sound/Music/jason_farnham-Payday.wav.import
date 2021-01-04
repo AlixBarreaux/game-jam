@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jason_farnham-Payday.wav-37de6ad3ef19b73ccd2978acc520533f.sample"
+
+[deps]
+
+source_file="res://Sound/Music/jason_farnham-Payday.wav"
+dest_files=[ "res://.import/jason_farnham-Payday.wav-37de6ad3ef19b73ccd2978acc520533f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

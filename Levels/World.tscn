@@ -93,6 +93,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3 )
 
 [node name="FurnitureDoorDouble" parent="Furnitures" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.592072, 0, 0 )
+collision_layer = 16
 
 [node name="FurnitureDumpster" parent="Furnitures" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3 )
@@ -102,5 +103,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, -2.5 )
 
 [node name="FurnitureDoorSingle" parent="Furnitures" instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, 0 )
+collision_layer = 16
 is_key_required = true
 required_key_id = 1
