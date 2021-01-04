@@ -1,6 +1,7 @@
-KEYS,en_US,fr_FR,hi_IN
-CREDITS,Credits,Crédits,
-OPTIONS,Options,Options,
-PLAY,Play,Jouer,चलायें
-QUIT TO DESKTOP,Quit to Desktop,Quitter vers le Bureau,
-QUIT TO MAIN MENU,Quit to Main Menu,Quitter vers le menu Principal,
+KEYS,en_US,de_DE,es_ES,fr_FR,pt_BR,hi_IN
+BACK,Back,Zurück,Volver,Retour,,
+CREDITS,Credits,Credits,Créditos,Crédits,Créditos,
+OPTIONS,Options,Optionen,Opciones,Options,Opções,
+PLAY,Play,Spielen,Jugar,Jouer,Jogar,चलायें
+QUIT TO DESKTOP,Quit to Desktop,Beenden zum Desktop,Salir al escritorio,Quitter vers le bureau,Sair para ecrã,
+QUIT TO MAIN MENU,Quit to Main Menu,Beenden zum Hauptmenü,Salir al menú principal,Quitter vers le menu principal,Sair do menu principal,
