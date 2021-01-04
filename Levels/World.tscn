@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Items/Banana/ItemBanana.tscn" type="PackedScene" id=2]
@@ -11,8 +11,10 @@
 [ext_resource path="res://Interactables/Items/Watermelon/ItemWatermelon.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Interactables/Items/Tomato/ItemTomato.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Interactables/Items/Strawberry/ItemStrawberry.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Interactables/Furnitures/ElectricCommand/FurnitureElectricCommand.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Interactables/Items/Baguette/ItemBaguette.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Interactables/Items/Keys/Base/ItemKey.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Interactables/Furnitures/Doors/Single/FurnitureDoorSingle.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Interactables/Furnitures/Doors/Double/FurnitureDoorDouble.tscn" type="PackedScene" id=15]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.345098, 0.345098, 0.345098, 1 )
@@ -25,6 +27,7 @@ material = SubResource( 1 )
 [node name="World" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.11978 )
 
 [node name="Environment" type="Spatial" parent="."]
 
@@ -88,8 +91,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3 )
 
 [node name="Furnitures" type="Spatial" parent="."]
 
+[node name="FurnitureDoorDouble" parent="Furnitures" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.592072, 0, 0 )
+
 [node name="FurnitureDumpster" parent="Furnitures" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3 )
 
-[node name="ItemKey" parent="." instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.93112, 1, -0.303505 )
+[node name="FurnitureElectricCommand" parent="Furnitures" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, -2.5 )
+
+[node name="FurnitureDoorSingle" parent="Furnitures" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0, 0 )
+is_key_required = true
+required_key_id = 1

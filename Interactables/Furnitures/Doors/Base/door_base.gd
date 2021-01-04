@@ -4,6 +4,7 @@ class_name Door
 
 # -------------------- DECLARE VARIABLES --------------------
 
+export var is_key_required : bool = false
 export var required_key_id : int = 0
 
 enum STATES {CLOSED=0, OPENED}
@@ -20,7 +21,8 @@ func _ready() -> void:
 # -------------------- DECLARE FUNCTIONS --------------------
 
 func initialize_asserts() -> void:
-	assert(required_key_id > 0)
+	if is_key_required:
+		assert(required_key_id > 0)
 
 
 func initialize_signals() -> void:
@@ -36,9 +38,11 @@ func _check_current_state() -> void:
 	match current_state:
 		STATES.CLOSED:
 #			model.animation_player.play(model.animation_list[0])
+			open()
 			self.current_state = STATES.OPENED
 			WorldEvents.door_closed_amount -= 1
 		STATES.OPENED:
+			close()
 #			model.animation_player.play_backwards(model.animation_list[0])
 			self.current_state = STATES.CLOSED
 			WorldEvents.door_closed_amount += 1
@@ -47,9 +51,23 @@ func _check_current_state() -> void:
 
 
 func check_if_player_has_key() -> void:
-	for key in PlayerItemList.carried_keys_ids:
-		if key == self.required_key_id:
-			print("The player has the key to open me: ", self.name)
-			break
-		else:
-			print("The player doesn't have the key to open me: ", self.name)
+	if is_key_required:
+		for key in PlayerItemList.carried_keys_ids:
+			if key == self.required_key_id:
+				print("The player has the key to open or close me: ", self.name)
+				_check_current_state()
+				break
+			else:
+				_check_current_state()
+				print("The player doesn't have the key to open or close me: ", self.name)
+	else:
+		_check_current_state()
+		print("Not key required, opening or closing!")
+
+
+func open() -> void:
+	model.animation_player.play(model.animation_list[0])
+
+
+func close() -> void:
+	model.animation_player.play_backwards(model.animation_list[0])

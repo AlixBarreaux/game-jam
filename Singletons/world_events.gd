@@ -7,6 +7,9 @@ var win_conditions_met : bool = false
 var are_all_doors_closed : bool = false
 var door_closed_amount : int = 0
 
+# TO BE IMPLEMENTED
+var are_all_items_stored : bool = false
+
 # --------------------  DECLARE SIGNALS  --------------------
 
 # --------------------   RUN THE CODE    --------------------

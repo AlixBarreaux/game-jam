@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.388105, 1.07603, 0.0876786 )
+
+[node name="DoorRight" type="KinematicBody"]
+transform = Transform( 1, 0, -6.51683e-07, 0, 1, 0, 6.51683e-07, 0, 1, -0.6086, 0, -3.96614e-07 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.975625, 1.07324, 0.000139117 )
+shape = SubResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
