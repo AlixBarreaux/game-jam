@@ -28,6 +28,6 @@ func initialize_signals() -> void:
 
 
 func on_game_launched() -> void:
-	$Player.inputs_enabled = true
-	$Player/Head/Camera.current = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	$Player/Head/Camera.current = true
+	$Player.inputs_enabled = true

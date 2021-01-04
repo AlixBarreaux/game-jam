@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/nicolai_heidlas_music_-_chill_tune.wav-9f3abf0a2d19fb46dcb3156460e49e48.sample"
+
+[deps]
+
+source_file="res://Sound/Music/nicolai_heidlas_music_-_chill_tune.wav"
+dest_files=[ "res://.import/nicolai_heidlas_music_-_chill_tune.wav-9f3abf0a2d19fb46dcb3156460e49e48.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
