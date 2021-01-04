@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Furniture",
 "class": "Door",
 "language": "GDScript",
-"path": "res://Interactables/Furnitures/Doors/Single/door.gd"
+"path": "res://Interactables/Furnitures/Doors/Base/door_base.gd"
 }, {
 "base": "Furniture",
 "class": "Dumpster",
