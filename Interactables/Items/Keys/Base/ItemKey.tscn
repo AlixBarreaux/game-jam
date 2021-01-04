@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Interactables/Items/Base/Item.tscn" type="PackedScene" id=1]
+
+[node name="ItemKey" instance=ExtResource( 1 )]
+is_key = true

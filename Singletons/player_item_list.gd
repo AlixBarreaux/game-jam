@@ -7,7 +7,7 @@ export var max_item_amount : int = 3
 var current_item_amount : int = 0
 
 var carried_items_ids : PoolIntArray = []
-var carried_keys_ids : PoolIntArray = []
+var carried_keys_ids : Array = []
 
 
 var banana = preload("res://Interactables/Items/Banana/ItemBanana.tscn")
@@ -94,3 +94,8 @@ func remove_item_from_inventory(index: int) -> void:
 	current_item_amount -= 1
 	print("Remove in singleton! Carried item ids: ", carried_items_ids)
 	print("Current_item_amount: ", current_item_amount)
+
+
+func add_key(id: int) -> void:
+	carried_keys_ids.append(id)
+	print("Key addd in singleton. ID: ", id)
