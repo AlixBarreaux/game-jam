@@ -7,6 +7,7 @@ export var max_item_amount : int = 3
 var current_item_amount : int = 0
 
 var carried_items_ids : PoolIntArray = []
+var carried_keys_ids : PoolIntArray = []
 
 
 var banana = preload("res://Interactables/Items/Banana/ItemBanana.tscn")

@@ -40,8 +40,6 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
-var y_velocity : Vector3 = Vector3(0, 1, 0)
-var max_gravity : float = 12
 func _physics_process(_delta : float) -> void:
 	self.move_and_slide(velocity, Vector3.UP)
 

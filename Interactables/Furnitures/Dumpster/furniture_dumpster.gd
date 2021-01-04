@@ -4,8 +4,8 @@ class_name Dumpster
 
 # -------------------- DECLARE VARIABLES --------------------
 
-enum STATE {CLOSED=0, OPENED}
-var current_state = STATE.CLOSED
+enum STATES {CLOSED=0, OPENED}
+var current_state = STATES.CLOSED
 
 
 # --------------------  DECLARE SIGNALS  --------------------
@@ -21,12 +21,12 @@ func _ready() -> void:
 
 func _check_current_state() -> void:
 	match current_state:
-		STATE.CLOSED:
+		STATES.CLOSED:
 			model.animation_player.play(model.animation_list[0])
-			self.current_state = STATE.OPENED
-		STATE.OPENED:
+			self.current_state = STATES.OPENED
+		STATES.OPENED:
 			model.animation_player.play_backwards(model.animation_list[0])
-			self.current_state = STATE.CLOSED
+			self.current_state = STATES.CLOSED
 		_:
 			printerr("(!) ERROR in: ", self.name, " in method: check_current_state()")
 
