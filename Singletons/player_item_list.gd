@@ -46,8 +46,6 @@ func pickup_item(item) -> bool:
 		return true
 
 
-
-
 func drop_item() -> void:
 	if current_item_amount > -1 and carried_items_ids.size() > 0:
 		print(carried_items_ids)
@@ -98,3 +96,9 @@ func remove_item_from_inventory(index: int) -> void:
 func add_key(id: int) -> void:
 	carried_keys_ids.append(id)
 	print("Key addd in singleton. ID: ", id)
+
+
+func delete_all_carried_items() -> void:
+	carried_items_ids = []
+	carried_keys_ids = []
+	current_item_amount = 0
