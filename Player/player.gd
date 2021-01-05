@@ -22,6 +22,7 @@ var velocity : Vector3 = Vector3(0, 0, 0)
 
 var is_moving : bool = false
 var inputs_enabled : bool = false
+var action_inputs_enabled : bool = true
 
 
 onready var head : Spatial = $Head
@@ -63,6 +64,17 @@ func get_input() -> void:
 	velocity = Vector3(0, 0, 0)
 	
 	if not inputs_enabled:
+		return
+
+	if Input.is_action_just_pressed("objectives"):
+		if not $CanvasLayer/GUIObjectives.visible:
+			$CanvasLayer/GUIObjectives.visible = true
+			action_inputs_enabled = false
+		else:
+			$CanvasLayer/GUIObjectives.visible = false
+			action_inputs_enabled = true
+
+	if not action_inputs_enabled:
 		return
 
 	# Sprint Toggle

@@ -35,6 +35,12 @@ shape = SubResource( 3 )
 
 [node name="DoubleDoor" parent="Model" index="0" instance=ExtResource( 2 )]
 
+[node name="DoorLeft" parent="Model/DoubleDoor/DoorLeft" index="0"]
+collision_layer = 2
+
+[node name="DoorRight" parent="Model/DoubleDoor/DoorRight" index="0"]
+collision_layer = 2
+
 [node name="CollisionShape" type="CollisionShape" parent="Interactable" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07324, 0 )
 shape = SubResource( 4 )

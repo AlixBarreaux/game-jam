@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Interact_Raycast/InteractRayCast.tscn" type="PackedScene" id=2]
-[ext_resource path="res://GUI/GUIPlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GUI/Player/GUIPlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GUI/Objectives/GUIObjectives.tscn" type="PackedScene" id=4]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.2, 1, 0.2 )
@@ -29,3 +30,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1.6 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[node name="GUIObjectives" parent="CanvasLayer" instance=ExtResource( 4 )]
+visible = false

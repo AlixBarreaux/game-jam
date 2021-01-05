@@ -26,6 +26,8 @@ func initialize_asserts() -> void:
 func spawn_item() -> void:
 	var instance = item_model_resource.instance()
 	item_spot.add_child(instance)
+	
+	WorldEvents.current_items_stored_amount += 1
 
 
 func _on_InteractZone_interaction_received() -> void:

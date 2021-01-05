@@ -11,7 +11,7 @@ extends Panel
 
 func _on_GurjasStudioLinkButton_pressed() -> void:
 	# warning-ignore: return_value_discarded
-	OS.shell_open("https://www.artstation.com/gurjasstudios")
+	OS.shell_open("https://www.youtube.com/channel/UCHLhrrU_4t1TLIjOUqUkwkA/videos")
 
 
 func _on_CtnPhacoLinkButton_pressed() -> void:

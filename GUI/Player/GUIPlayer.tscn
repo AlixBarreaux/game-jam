@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://GUI/crosshair_outside.png" type="Texture" id=1]
-[ext_resource path="res://GUI/crosshair_inside.png" type="Texture" id=2]
+[ext_resource path="res://GUI/Player/crosshair_outside.png" type="Texture" id=1]
+[ext_resource path="res://GUI/Player/crosshair_inside.png" type="Texture" id=2]
+[ext_resource path="res://Special/Defeat_Timer/DefeatTimer.tscn" type="PackedScene" id=3]
 
-[node name="Control" type="Control"]
+[node name="GUIPlayer" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -52,3 +53,5 @@ text = "00:00"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="DefeatTimer" parent="." instance=ExtResource( 3 )]
