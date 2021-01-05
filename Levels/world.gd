@@ -37,11 +37,9 @@ func initialize_signals() -> void:
 func compare_items_and_storage_count() -> void:
 	for storage in storages.get_children():
 		WorldEvents.total_storages_amount += 1
-		print("Total storages: ", WorldEvents.total_storages_amount)
 		
 	for item in items.get_children():
 		WorldEvents.total_items_amount += 1
-		print("Total items: ", WorldEvents.total_items_amount)
 	
 	if WorldEvents.total_storages_amount > WorldEvents.total_items_amount:
 		printerr("ERROR: There are more storages than items!")

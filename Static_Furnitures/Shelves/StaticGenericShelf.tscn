@@ -6,6 +6,7 @@
 extents = Vector3( 2.08091, 1.15456, 0.962211 )
 
 [node name="StaticGenericShelf" type="StaticBody"]
+collision_layer = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.962935, 0 )

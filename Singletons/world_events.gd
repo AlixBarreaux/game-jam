@@ -61,10 +61,13 @@ func check_if_win_conditions_met() -> void:
 		print("OH NO! I have to reenable it!")
 		return
 
+	check_if_all_doors_closed()
 	if not are_all_doors_closed:
 		win_conditions_met = false
 		print("The doors! CLOSE ALL THE DOORS!")
 		return
+	
+	print("OH MY GOD! YOU SAVED THE DAY!!!")
 
 
 func _on_game_over() ->  void:

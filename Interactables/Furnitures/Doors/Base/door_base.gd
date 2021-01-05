@@ -19,6 +19,7 @@ func _ready() -> void:
 	initialize_signals()
 	
 	WorldEvents.total_door_amount += 1
+	WorldEvents.door_closed_amount += 1
 
 # -------------------- DECLARE FUNCTIONS --------------------
 
