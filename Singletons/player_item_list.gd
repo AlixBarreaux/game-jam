@@ -95,7 +95,7 @@ func remove_item_from_inventory(index: int) -> void:
 
 func add_key(id: int) -> void:
 	carried_keys_ids.append(id)
-	print("Key addd in singleton. ID: ", id)
+	print("Key added in singleton. ID: ", id)
 
 
 func delete_all_carried_items() -> void:

@@ -4,16 +4,16 @@
 [ext_resource path="res://Interactables/Furnitures/Doors/Double/DoubleDoor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Interactables/Furnitures/Doors/Double/automatic_door_detector.gd" type="Script" id=3]
 
-[sub_resource type="BoxShape" id=11]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 1.10045, 1.69244 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.544948, 1.07603, 0.0876786 )
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.544948, 1.07603, 0.0876786 )
 
 [sub_resource type="BoxShape" id=4]
-extents = Vector3( 0.544948, 1.07603, 0.0876786 )
-
-[sub_resource type="BoxShape" id=10]
 extents = Vector3( 1.84341, 1.07603, 0.0876786 )
 
 [node name="FurnitureDoorDouble" instance=ExtResource( 1 )]
@@ -23,21 +23,21 @@ script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="AutomaticDoorDetector" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05381, 0 )
-shape = SubResource( 11 )
+shape = SubResource( 1 )
 
 [node name="LeftSupportCollisionShape" type="CollisionShape" parent="." index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2808, 1.07324, 0 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="RightSupportCollisionShape2" type="CollisionShape" parent="." index="2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3023, 1.07324, 0 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="DoubleDoor" parent="Model" index="0" instance=ExtResource( 2 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="Interactable" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07324, 0 )
-shape = SubResource( 10 )
+shape = SubResource( 4 )
 disabled = true
 [connection signal="body_entered" from="AutomaticDoorDetector" to="AutomaticDoorDetector" method="_on_AutomaticDoorDetector_body_entered"]
 [connection signal="body_exited" from="AutomaticDoorDetector" to="AutomaticDoorDetector" method="_on_AutomaticDoorDetector_body_exited"]

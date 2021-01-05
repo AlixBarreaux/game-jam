@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Items/Banana/ItemBanana.tscn" type="PackedScene" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://GUI/MainMenu.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Interactables/Storages/Banana/StorageBanana.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Static_Furnitures/Shelves/StaticGenericShelf.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Interactables/Furnitures/Doors/Single/FurnitureDoorSingle.tscn" type="PackedScene" id=19]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.345098, 0.345098, 0.345098, 1 )
@@ -114,6 +115,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4, 0, 1.2 )
 
 [node name="StorageBanana" parent="Furnitures/StaticGenericShelf" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00445509, 1.29027, 0.238306 )
+
+[node name="FurnitureDoorSingle" parent="Furnitures" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0 )
+
+[node name="FurnitureDoorSingle2" parent="Furnitures" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1.8 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

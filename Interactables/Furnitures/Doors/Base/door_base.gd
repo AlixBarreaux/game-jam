@@ -17,6 +17,8 @@ var current_state = STATES.CLOSED
 func _ready() -> void:
 	initialize_asserts()
 	initialize_signals()
+	
+	WorldEvents.total_door_amount += 1
 
 # -------------------- DECLARE FUNCTIONS --------------------
 
