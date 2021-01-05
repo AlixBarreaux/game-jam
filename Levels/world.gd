@@ -48,6 +48,7 @@ func compare_items_and_storage_count() -> void:
 	elif WorldEvents.total_items_amount > WorldEvents.total_storages_amount:
 		printerr("ERROR: There are more items than storages!")
 	
+	# If you have an error leading there look at the output log error!
 	assert(WorldEvents.total_storages_amount == WorldEvents.total_items_amount)
 	
 	print("Successfully loaded items and storages!")

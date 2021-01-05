@@ -40,7 +40,16 @@ func check_if_all_doors_closed() -> void:
 		are_all_doors_closed = false
 
 
+func check_if_all_items_are_in_storages() -> void:
+	if current_items_stored_amount == total_items_amount:
+		are_all_items_stored = true
+	else:
+		are_all_items_stored = false
+		
+
+
 func check_if_win_conditions_met() -> void:
+	check_if_all_items_are_in_storages()
 	if not are_all_items_stored:
 		win_conditions_met = false
 		print("I have the feeling... Oh man... I forgot to store ALL the items!")
