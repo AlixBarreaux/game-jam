@@ -10,11 +10,12 @@ extents = Vector3( 0.0389121, 0.0320709, 0.0350324 )
 id = 3
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0231866, 0 )
+transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.0231866, 0 )
 shape = SubResource( 1 )
 
 [node name="CannedPeas" parent="." index="1" instance=ExtResource( 2 )]
+transform = Transform( -6.55671e-09, 0, -0.15, 0, 0.15, 0, 0.15, 0, -6.55671e-09, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="InteractableZone" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0768134, 0 )
+transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.0768134, 0 )
 shape = SubResource( 1 )

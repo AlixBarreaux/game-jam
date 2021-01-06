@@ -1,20 +1,25 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Interactables/Items/Base/Item.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Items/Potato/Potato.tscn" type="PackedScene" id=2]
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.0967785
+height = 0.0562558
+
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.190104, 0.114349, 0.178956 )
 
 [node name="ItemPotato" instance=ExtResource( 1 )]
 id = 6
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0939057, 0.00949287 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6481e-05, 0.0939057, 5.6481e-05 )
 shape = SubResource( 1 )
 
 [node name="Potato" parent="." index="1" instance=ExtResource( 2 )]
+transform = Transform( -9.81762e-09, 0, -0.224602, 0, 0.22495, 0, 0.224601, 0, -9.81766e-09, 5.6481e-05, 0, 5.6481e-05 )
 
 [node name="CollisionShape" type="CollisionShape" parent="InteractableZone" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00609433, 0.00949287 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
