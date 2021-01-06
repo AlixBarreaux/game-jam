@@ -128,9 +128,24 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	# CHECK ALSO IF CURSOR SHOWN? If a GUI menu is opened
 	if event is InputEventMouseMotion:
+		# Look Left/Right
 		self.rotate_y(deg2rad(-event.relative.x * horizontal_look_sensitivity))
+		# Look Up/Down
 		head.rotate_x(deg2rad(-event.relative.y * vertical_look_sensitivity))
 
 		# Clamp camera look to avoid funky rolling
 		head.rotation.x = clamp(head.rotation.x, deg2rad(min_look_up_angle), deg2rad(max_look_up_angle))
 
+	# Experimental. Might not work since it was not tested (no controller owned)
+	# Controller Inputs
+	if Input.get_action_strength("look_left"):
+		self.rotate_y(deg2rad(-event.relative.x * horizontal_look_sensitivity))
+
+	if Input.get_action_strength("look_right"):
+		self.rotate_y(deg2rad(-event.relative.x * horizontal_look_sensitivity))
+		
+	if Input.get_action_strength("look_up"):
+		head.rotate_x(deg2rad(-event.relative.y * vertical_look_sensitivity))
+		
+	if Input.get_action_strength("look_down"):
+		head.rotate_x(deg2rad(-event.relative.y * vertical_look_sensitivity))
