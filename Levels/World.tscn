@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Items/Banana/ItemBanana.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Interactables/Furnitures/ElectricCommand/FurnitureElectricCommand.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Interactables/Furnitures/Doors/Single/FurnitureDoorSingle.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Levels/world.gd" type="Script" id=14]
+[ext_resource path="res://Interactables/Furnitures/Doors/Garage/FurnitureDoorGarage.tscn" type="PackedScene" id=15]
 [ext_resource path="res://GUI/MainMenu/MainMenu.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Interactables/Storages/Banana/StorageBanana.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Static_Furnitures/Shelves/Generic/StaticGenericShelf.tscn" type="PackedScene" id=18]
@@ -43,7 +44,7 @@ texture = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 2.4, 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, 11.2198 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, -38.6802 )
 
 [node name="Environment" type="Spatial" parent="."]
 
@@ -83,6 +84,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27643, 0.0425518, -18.2943 )
 
 [node name="FurnitureDoorSingle2" parent="Furnitures/Interactable" instance=ExtResource( 13 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.62377, 0.0425518, -16.2677 )
+
+[node name="FurnitureDoorGarage" parent="Furnitures/Interactable" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2517, 0.142552, -28.0235 )
 
 [node name="FurnitureDumpster" parent="Furnitures/Interactable" instance=ExtResource( 4 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -4.78953, 0, -28.9636 )
