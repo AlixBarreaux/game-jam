@@ -102,11 +102,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.60445, 1.29027, 1.43831 )
 [node name="AudioSpeaker" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.23135, 0, 8.42915 )
 
-[node name="HintItem2" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0695, 0, 3.52618 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MainMenu" parent="CanvasLayer" instance=ExtResource( 16 )]
+
+[node name="HintItemEasterEgg" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.51704, -0.770385, 9.98513 )
 
 [editable path="HintItem"]

@@ -59,9 +59,11 @@ func hide_sprite3D() -> void:
 	tween.start()
 
 
-func _on_Area_body_entered(_body: PhysicsBody) -> void:
-	self.toggle_sprite_visible()
+func _on_Area_body_entered(body: PhysicsBody) -> void:
+	if body is Player:
+		self.toggle_sprite_visible()
 
 
-func _on_Area_body_exited(_body: PhysicsBody) -> void:
-	self.toggle_sprite_visible()
+func _on_Area_body_exited(body: PhysicsBody) -> void:
+	if body is Player:
+		self.toggle_sprite_visible()
