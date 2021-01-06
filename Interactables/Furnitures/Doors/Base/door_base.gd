@@ -70,9 +70,11 @@ func check_if_player_has_key() -> void:
 
 func open() -> void:
 	model.animation_player.play(model.animation_list[0])
+	$AudioStreamPlayer3D.play()
 	WorldEvents.door_closed_amount -= 1
 
 
 func close() -> void:
 	model.animation_player.play_backwards(model.animation_list[0])
+	$AudioStreamPlayer3D.play()
 	WorldEvents.door_closed_amount += 1

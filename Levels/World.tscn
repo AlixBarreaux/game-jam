@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Items/Banana/ItemBanana.tscn" type="PackedScene" id=2]
@@ -29,6 +29,11 @@ material = SubResource( 1 )
 
 [sub_resource type="BoxShape" id=3]
 
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.521569, 0.521569, 0.521569, 1 )
+
 [node name="World" type="Spatial"]
 script = ExtResource( 14 )
 
@@ -44,7 +49,7 @@ texture = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 2.4, 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, -38.6802 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4, 0, 19.3198 )
 
 [node name="Environment" type="Spatial" parent="."]
 
@@ -81,12 +86,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9238, 0.2, 2.26255 )
 
 [node name="FurnitureDoorSingle" parent="Furnitures/Interactable" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27643, 0.0425518, -18.2943 )
+collision_layer = 16
 
 [node name="FurnitureDoorSingle2" parent="Furnitures/Interactable" instance=ExtResource( 13 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.62377, 0.0425518, -16.2677 )
+collision_layer = 16
 
 [node name="FurnitureDoorGarage" parent="Furnitures/Interactable" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2517, 0.142552, -28.0235 )
+collision_layer = 16
 
 [node name="FurnitureDumpster" parent="Furnitures/Interactable" instance=ExtResource( 4 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -4.78953, 0, -28.9636 )
@@ -133,6 +141,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.1, -12.4 )
 
 [node name="Walls" parent="Store" index="7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.121644, 0.0425518, -1.3803 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Store"]
+transform = Transform( 0.53701, 0, -0.00362798, 0, 0.0755623, 0, 0.0221882, 0, 0.0878063, 8.08538, 2.00534, -5.91491 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Store"]
+transform = Transform( 0.0221881, 0, 0.0878063, 0, 0.0755623, 0, -0.53701, 0, 0.00362797, -8.92689, 2.00534, -3.86726 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
 
 [node name="HintItemEasterEgg" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48296, -0.770385, 16.4851 )
