@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Special/Store/Walls.material" type="Material" id=1]
 [ext_resource path="res://Special/Store/Roof.material" type="Material" id=2]
@@ -33,6 +33,39 @@ surfaces/0 = {
 "skeleton_aabb": [  ],
 "vertex_count": 8
 }
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 3.51998, 1, 0.136232 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 4.3417, 1, 0.136232 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 4.3417, 1, 0.136232 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 8.20002, 1, 0.136232 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 2.56021, 1, 0.136232 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 4.94881, 1, 0.136232 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 3.66644, 1, 0.136232 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 2.67196, 1, 0.136232 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 0.891125, 1, 0.136232 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 3.48154, 1, 0.136232 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 0.716587, 1, 0.136232 )
 
 [sub_resource type="ArrayMesh" id=3]
 resource_name = "Walls"
@@ -72,6 +105,58 @@ material/0 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.121644, 4.61115, -1.3803 )
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="WallCollisions" type="StaticBody" parent="Spatial"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.18426, 0.982768, 5.29285 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41574, 0.982768, 5.29285 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.91574, 0.982768, 1.03696 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.70424, 0.982768, 1.03696 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.629358, 0.982768, -5.9936 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape6" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.273787, 0.982768, -8.81711 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape7" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( 0.264378, 0, 0.964419, 0, 1, 0, -0.964419, 0, 0.264378, -7.54165, 0.978043, -10.8423 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape8" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( 0.264378, 0, -0.964419, 0, 1, 0, 0.964419, 0, 0.264378, 7.71876, 0.978043, -12.0811 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape9" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.69311, 0.982768, -5.94716 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape10" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.91574, 0.982768, -5.28179 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape11" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77784, 0.982768, -15.5373 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape12" type="CollisionShape" parent="Spatial/WallCollisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11984, 0.982768, -15.5373 )
+shape = SubResource( 13 )
 
 [node name="Walls" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.121644, 0.0425518, -1.3803 )

@@ -17,3 +17,5 @@ shape = SubResource( 1 )
 [node name="CollisionShape" type="CollisionShape" parent="Interactable" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.024, 0 )
 shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
