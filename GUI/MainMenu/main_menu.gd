@@ -59,6 +59,6 @@ func _on_PCSensitivityApplyButton_pressed() -> void:
 
 
 func _on_SensitivityApplyButton_pressed() -> void:
-	Settings.horizontal_look_sensitivity = $OptionsPanel/VBoxContainer3/VBoxContainer2/ConsoleSpinBox.value
-	Settings.vertical_look_sensitivity = $OptionsPanel/VBoxContainer3/VBoxContainer2/ConsoleSpinBox.value
+	Settings.console_horizontal_look_sensitivity = $OptionsPanel/VBoxContainer3/VBoxContainer2/ConsoleSpinBox.value
+	Settings.console_vertical_look_sensitivity = $OptionsPanel/VBoxContainer3/VBoxContainer2/ConsoleSpinBox.value
 	Settings.emit_signal("sensitivity_changed")

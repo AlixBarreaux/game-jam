@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/garagedoor.gltf-1f0bca1bb85d458a7f267f230d8f721f.scn"
+path="res://.import/garage_door.gltf-0fe7b9d00c374cd38406fb76cdb3b9ef.scn"
 
 [deps]
 
-source_file="res://Interactables/Furnitures/Doors/Garage/garagedoor.gltf"
-dest_files=[ "res://.import/garagedoor.gltf-1f0bca1bb85d458a7f267f230d8f721f.scn" ]
+source_file="res://Interactables/Furnitures/Doors/Garage/garage_door.gltf"
+dest_files=[ "res://.import/garage_door.gltf-0fe7b9d00c374cd38406fb76cdb3b9ef.scn" ]
 
 [params]
 
