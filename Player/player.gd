@@ -8,8 +8,8 @@ class_name Player
 export var current_speed : float = 10.0
 
 # Camera
-export var horizontal_look_sensitivity : float = 0.1
-export var vertical_look_sensitivity : float = 0.1
+onready var horizontal_look_sensitivity : float = Settings.horizontal_look_sensitivity
+onready var vertical_look_sensitivity : float = Settings.vertical_look_sensitivity
 
 # Camera
 var min_look_up_angle : int = -90
@@ -38,6 +38,7 @@ func _ready() -> void:
 	# warning-ignore: return_value_discarded
 
 	initialize_asserts()
+	Settings.connect("sensitivity_changed", self, "on_sensitivity_changed")
 
 #	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -140,14 +141,20 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	# Experimental. Might not work since it was not tested (no controller owned)
 	# Controller Inputs
-	if Input.get_action_strength("look_left"):
+	if Input.is_action_pressed("look_left"):
 		self.rotate_y(deg2rad(1 * horizontal_look_sensitivity))
 
-	if Input.get_action_strength("look_right"):
+	if Input.is_action_pressed("look_right"):
 		self.rotate_y(deg2rad(-1 * horizontal_look_sensitivity))
 		
-	if Input.get_action_strength("look_up"):
+	if Input.is_action_pressed("look_up"):
 		head.rotate_x(deg2rad(1 * vertical_look_sensitivity))
 		
-	if Input.get_action_strength("look_down"):
+	if Input.is_action_pressed("look_down"):
 		head.rotate_x(deg2rad(-1 * vertical_look_sensitivity))
+
+
+func on_sensitivity_changed() -> void:
+	self.horizontal_look_sensitivity = Settings.horizontal_look_sensitivity
+	self.vertical_look_sensitivity = Settings.vertical_look_sensitivity
+
