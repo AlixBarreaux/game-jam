@@ -18,7 +18,7 @@ func _ready() -> void:
 
 func _on_PlayButton_pressed() -> void:
 	self.visible = false
-	emit_signal("game_launched")
+	WorldEvents.emit_signal("game_launched")
 
 
 func _on_CreditsButton_pressed() -> void:

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shield_activation.wav-ed174111279d7e1ba140fca06fed559e.sample"
+
+[deps]
+
+source_file="res://Special/Audio_Speaker/shield_activation.wav"
+dest_files=[ "res://.import/shield_activation.wav-ed174111279d7e1ba140fca06fed559e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

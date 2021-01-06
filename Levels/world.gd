@@ -29,7 +29,7 @@ func initialize_asserts() -> void:
 
 func initialize_signals() -> void:
 	# warning-ignore: return_value_discarded
-	$CanvasLayer/MainMenu.connect("game_launched", self, "on_game_launched")
+	WorldEvents.connect("game_launched", self, "on_game_launched")
 
 
 # Make sure the items amount = the storages amount to avoid having a storage

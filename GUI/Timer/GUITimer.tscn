@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Special/Defeat_Timer/DefeatTimer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GUI/Timer/gui_timer.gd" type="Script" id=2]
+[ext_resource path="res://GUI/Timer/timer_progress_layer128.png" type="Texture" id=3]
+[ext_resource path="res://GUI/Timer/timer_over_layer128.png" type="Texture" id=4]
+[ext_resource path="res://GUI/Timer/timer_under_layer128.png" type="Texture" id=5]
+
+[node name="GUITimer" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 128.0
+margin_bottom = 128.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -64.0
+margin_right = 64.0
+margin_bottom = 64.0
+texture_under = ExtResource( 5 )
+texture_over = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+fill_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLeftLabel" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -18.0
+margin_top = -7.0
+margin_right = 18.0
+margin_bottom = 7.0
+text = "00:00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GUITimer" type="Timer" parent="."]
+
+[node name="DefeatTimer" parent="." instance=ExtResource( 1 )]
+[connection signal="timeout" from="GUITimer" to="." method="_on_GUITimer_timeout"]

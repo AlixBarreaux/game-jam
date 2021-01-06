@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Special/Audio_Speaker/track_base.gd" type="Script" id=1]
+
+[node name="TrackBase" type="AudioStreamPlayer3D"]
+script = ExtResource( 1 )

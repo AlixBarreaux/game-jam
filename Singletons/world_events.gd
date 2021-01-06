@@ -29,6 +29,9 @@ var is_electricity_turned_on : bool = false
 
 # --------------------  DECLARE SIGNALS  --------------------
 
+signal game_launched
+signal game_won
+
 # --------------------   RUN THE CODE    --------------------
 
 # -------------------- DECLARE FUNCTIONS --------------------
@@ -68,6 +71,7 @@ func check_if_win_conditions_met() -> void:
 		return
 	
 	print("OH MY GOD! YOU SAVED THE DAY!!!")
+	emit_signal("game_won")
 
 
 func _on_game_over() ->  void:
@@ -83,3 +87,4 @@ func win_game() -> void:
 
 func loose_game() -> void:
 	print("You are FIRED!")
+

@@ -4,26 +4,25 @@
 [ext_resource path="res://GUI/main_menu.gd" type="Script" id=2]
 [ext_resource path="res://GUI/Credits/GUICredits.tscn" type="PackedScene" id=3]
 
-[sub_resource type="InputEventJoypadButton" id=5]
+[sub_resource type="InputEventJoypadButton" id=1]
 button_index = 11
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[sub_resource type="InputEventKey" id=3]
+scancode = 67
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
+
+[sub_resource type="InputEventAction" id=5]
+action = "ui_cancel"
 
 [sub_resource type="ShortCut" id=6]
 shortcut = SubResource( 5 )
 
-[sub_resource type="InputEventKey" id=7]
-scancode = 67
-
-[sub_resource type="ShortCut" id=8]
-shortcut = SubResource( 7 )
-
-[sub_resource type="InputEventAction" id=4]
-action = "ui_cancel"
-
-[sub_resource type="ShortCut" id=3]
-shortcut = SubResource( 4 )
-
-[sub_resource type="Animation" id=1]
-resource_name = "VersionLabelAlphaModulate"
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("VersionLabel:self_modulate")
 tracks/0/interp = 1
@@ -66,7 +65,7 @@ focus_neighbour_left = NodePath("../QuitToDesktopButton")
 focus_neighbour_top = NodePath("../QuitToDesktopButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-shortcut = SubResource( 6 )
+shortcut = SubResource( 2 )
 text = "PLAY"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -80,7 +79,7 @@ focus_neighbour_top = NodePath("../PlayButton")
 focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-shortcut = SubResource( 8 )
+shortcut = SubResource( 4 )
 text = "CREDITS"
 
 [node name="QuitToDesktopButton" parent="VBoxContainer" instance=ExtResource( 1 )]
@@ -91,7 +90,7 @@ focus_neighbour_top = NodePath("../CreditsButton")
 focus_neighbour_bottom = NodePath("../PlayButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-shortcut = SubResource( 3 )
+shortcut = SubResource( 6 )
 
 [node name="TitleLabel" type="Label" parent="."]
 anchor_left = 0.5
@@ -125,7 +124,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/VersionLabelAlphaModulate = SubResource( 1 )
+anims/VersionLabelAlphaModulate = SubResource( 7 )
 
 [node name="GUICredits" parent="." instance=ExtResource( 3 )]
 visible = false

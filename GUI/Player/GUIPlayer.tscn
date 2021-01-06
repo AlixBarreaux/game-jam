@@ -2,7 +2,7 @@
 
 [ext_resource path="res://GUI/Player/crosshair_outside.png" type="Texture" id=1]
 [ext_resource path="res://GUI/Player/crosshair_inside.png" type="Texture" id=2]
-[ext_resource path="res://Special/Defeat_Timer/DefeatTimer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GUI/Timer/GUITimer.tscn" type="PackedScene" id=3]
 
 [node name="GUIPlayer" type="Control"]
 anchor_right = 1.0
@@ -44,14 +44,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TimeLeftLabel" type="Label" parent="."]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -40.0
-margin_bottom = 14.0
-text = "00:00"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="DefeatTimer" parent="." instance=ExtResource( 3 )]
+[node name="GUITimer" parent="." instance=ExtResource( 3 )]
