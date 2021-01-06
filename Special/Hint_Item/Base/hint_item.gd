@@ -18,13 +18,11 @@ onready var tween : Tween = $Tween
 # --------------------   RUN THE CODE    --------------------
 
 func _ready() -> void:
+	print(sprite3D.texture)
+#	sprite3D.texture = sprite_3d_texture
 	initialize_asserts()
 	
 	sprite3D.set_modulate(Color(1, 1, 1, 0))
-
-
-func _physics_process(_delta : float) -> void:
-	pass
 
 # -------------------- DECLARE FUNCTIONS --------------------
 
