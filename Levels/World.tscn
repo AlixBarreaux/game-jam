@@ -16,7 +16,6 @@
 [ext_resource path="res://Interactables/Furnitures/Doors/Garage/FurnitureDoorGarage.tscn" type="PackedScene" id=15]
 [ext_resource path="res://GUI/MainMenu/MainMenu.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Interactables/Storages/Banana/StorageBanana.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Static_Furnitures/Shelves/Generic/StaticGenericShelf.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Interactables/Furnitures/Doors/Double/DoubleDoor.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Special/Win_Area/WinArea.tscn" type="PackedScene" id=20]
 
@@ -38,6 +37,9 @@ albedo_color = Color( 0.309804, 0.309804, 0.309804, 1 )
 [sub_resource type="SpatialMaterial" id=9]
 albedo_color = Color( 0.803922, 0.694118, 0.486275, 1 )
 
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0.803922, 0.694118, 0.486275, 1 )
+
 [sub_resource type="CubeMesh" id=4]
 
 [sub_resource type="SpatialMaterial" id=5]
@@ -47,7 +49,7 @@ albedo_color = Color( 0.521569, 0.521569, 0.521569, 1 )
 script = ExtResource( 14 )
 
 [node name="WinArea" parent="." instance=ExtResource( 20 )]
-transform = Transform( 6, 0, 0, 0, 2.1, 0, 0, 0, 3, 0, 2.2, 42.263 )
+transform = Transform( 6, 0, 0, 0, 2.1, 0, 0, 0, 3, 0, 2.2, 22.263 )
 
 [node name="PivotPoint" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.0048 )
@@ -56,7 +58,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.0048 )
 transform = Transform( 1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 2.4, 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 36.3198 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6, 0, -10.6802 )
 
 [node name="Environment" type="Spatial" parent="."]
 
@@ -75,7 +77,7 @@ shape = SubResource( 3 )
 [node name="Boundaries" type="Spatial" parent="Environment"]
 
 [node name="Wall" type="StaticBody" parent="Environment/Boundaries"]
-transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 40, 30, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, -28, 30, 0, -10 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -88,7 +90,7 @@ mesh = SubResource( 7 )
 material/0 = SubResource( 9 )
 
 [node name="Wall2" type="StaticBody" parent="Environment/Boundaries"]
-transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 40, -30, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, -28, -30, 0, -10 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -101,7 +103,7 @@ mesh = SubResource( 7 )
 material/0 = SubResource( 9 )
 
 [node name="Wall3" type="StaticBody" parent="Environment/Boundaries"]
-transform = Transform( -4.37114e-08, 0, -29, 0, 3, 0, 1, 0, -1.26763e-06, 0, 0, -39 )
+transform = Transform( -4.37114e-08, 0, -31, 0, 3, 0, 1, 0, -1.35505e-06, 0, 0, -39 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -114,7 +116,7 @@ mesh = SubResource( 7 )
 material/0 = SubResource( 9 )
 
 [node name="Wall4" type="StaticBody" parent="Environment/Boundaries"]
-transform = Transform( -3.5605e-08, 0, -11.8109, 0, 3, 0, 1, 0, -6.33815e-07, 17.5, 0, 39 )
+transform = Transform( -4.37114e-08, 0, -13.5, 0, 3, 0, 1, 0, -5.90104e-07, 17.5, 0, 19 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -124,10 +126,10 @@ shape = SubResource( 6 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Environment/Boundaries/Wall4"]
 mesh = SubResource( 7 )
-material/0 = null
+material/0 = SubResource( 10 )
 
 [node name="Wall5" type="StaticBody" parent="Environment/Boundaries"]
-transform = Transform( -3.5605e-08, 0, -11.8109, 0, 3, 0, 1, 0, -6.33815e-07, -17.5, 0, 39 )
+transform = Transform( -4.37114e-08, 0, -13.5, 0, 3, 0, 1, 0, -5.90104e-07, -17.5, 0, 19 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -174,9 +176,6 @@ transform = Transform( -0.999552, 0, -0.0299278, 0, 1, 0, 0.0299278, 0, -0.99955
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.921645, 0.0425518, -7.1979 )
 
 [node name="Static" type="Spatial" parent="Furnitures"]
-
-[node name="StaticGenericShelf" parent="Furnitures/Static" instance=ExtResource( 18 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4, 0, 16.6 )
 
 [node name="StaticVeggiesShelf" parent="Furnitures/Static" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8, 0, 8.6 )
