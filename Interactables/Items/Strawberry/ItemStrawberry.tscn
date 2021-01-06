@@ -10,11 +10,12 @@ radius = 0.15
 id = 9
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0776959, 0 )
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0.0776959, 0 )
 shape = SubResource( 1 )
 
 [node name="Strawberry" parent="." index="1" instance=ExtResource( 2 )]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="InteractableZone" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0223041, 0 )
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, -0.0223041, 0 )
 shape = SubResource( 1 )

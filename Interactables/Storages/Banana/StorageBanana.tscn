@@ -6,3 +6,6 @@
 [node name="StorageBanana" instance=ExtResource( 1 )]
 accepted_item_id = 1
 item_model_resource = ExtResource( 2 )
+
+[node name="CollisionShape" parent="InteractZone" index="0"]
+transform = Transform( 1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0 )

@@ -7,7 +7,7 @@
 [ext_resource path="res://GUI/Game_Over/GUIGameOver.tscn" type="PackedScene" id=5]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.2, 1, 0.2 )
+extents = Vector3( 0.2, 0.88303, 0.2 )
 
 [node name="Player" type="KinematicBody"]
 collision_mask = 3

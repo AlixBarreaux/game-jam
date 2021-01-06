@@ -17,7 +17,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0219639, 0 )
 shape = SubResource( 1 )
 
 [node name="Tomato" parent="." index="1" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="InteractableZone" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0780361, 0 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.0780361, 0 )
 shape = SubResource( 2 )

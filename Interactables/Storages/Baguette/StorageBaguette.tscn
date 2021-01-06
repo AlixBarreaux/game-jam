@@ -6,3 +6,6 @@
 [node name="StorageBaguette" instance=ExtResource( 1 )]
 accepted_item_id = 10
 item_model_resource = ExtResource( 2 )
+
+[node name="ItemSpot" parent="." index="1"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
