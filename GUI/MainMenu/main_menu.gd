@@ -53,6 +53,6 @@ func _on_GUICredits_visibility_changed() -> void:
 
 
 func _on_SensitivityApplyButton_pressed() -> void:
-	Settings.horizontal_look_sensitivity = $Panel/VBoxContainer/SpinBox.value
-	Settings.vertical_look_sensitivity = $Panel/VBoxContainer/SpinBox.value
+	Settings.horizontal_look_sensitivity = $OptionsPanel/VBoxContainer/SpinBox.value
+	Settings.vertical_look_sensitivity = $OptionsPanel/VBoxContainer/SpinBox.value
 	Settings.emit_signal("sensitivity_changed")
