@@ -146,7 +146,8 @@ focus_neighbour_top = NodePath("../QuitToDesktopButton")
 focus_neighbour_right = NodePath("../QuitToDesktopButton")
 focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
 theme = ExtResource( 7 )
-text = "REPLAY"
+disabled = true
+text = "Replay (Broken, sorry! :( )"
 __meta__ = {
 "_editor_description_": ""
 }

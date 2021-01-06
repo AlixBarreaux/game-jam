@@ -13,6 +13,9 @@ onready var electricity_arrival_timer : Timer = $ElectricityArrivalTimer
 
 # --------------------   RUN THE CODE    --------------------
 
+func _ready() -> void:
+	electricity_arrival_timer.start()
+
 # -------------------- DECLARE FUNCTIONS --------------------
 
 func _on_Interactable_interaction_received() -> void:
