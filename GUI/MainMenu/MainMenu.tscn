@@ -149,10 +149,13 @@ __meta__ = {
 [node name="VBoxContainer3" type="VBoxContainer" parent="OptionsPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel/VBoxContainer3"]
 margin_right = 168.0
-margin_bottom = 207.0
+margin_bottom = 601.0
 custom_constants/separation = 50
 __meta__ = {
 "_edit_use_anchors_": false
@@ -196,58 +199,29 @@ focus_neighbour_right = NodePath("../../../../VBoxContainer/PlayButton")
 focus_neighbour_bottom = NodePath("../../VBoxContainer2/ConsoleSensitivityApplyButton")
 text = "APPLY"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="OptionsPanel/VBoxContainer3"]
-margin_top = 211.0
+[node name="Label2" type="Label" parent="OptionsPanel/VBoxContainer3/VBoxContainer"]
+margin_top = 257.0
 margin_right = 168.0
-margin_bottom = 468.0
-custom_constants/separation = 50
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_bottom = 529.0
+text = "CONTROLS:
+E: Pickup Item/Intera
+with Doors
 
-[node name="Label" type="Label" parent="OptionsPanel/VBoxContainer3/VBoxContainer2"]
+Space: Drop Item
+
+O: Display Objectives
+
+Follow EXACTLY
+what objectives
+state to win."
+
+[node name="LinkButton" type="LinkButton" parent="OptionsPanel/VBoxContainer3/VBoxContainer"]
+margin_top = 579.0
 margin_right = 168.0
-margin_bottom = 97.0
-text = "
-
-Console
-Look Sensitivity:"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ConsoleSpinBox" type="SpinBox" parent="OptionsPanel/VBoxContainer3/VBoxContainer2"]
-margin_top = 147.0
-margin_right = 168.0
-margin_bottom = 179.0
-focus_neighbour_left = NodePath("../../../VBoxContainer/CreditsButton")
-focus_neighbour_top = NodePath("../../../VBoxContainer/PlayButton")
-focus_neighbour_right = NodePath("../../../VBoxContainer/CreditsButton")
-focus_neighbour_bottom = NodePath("../SensitivityApplyButton")
-min_value = 0.01
-max_value = 6.0
-step = 0.1
-value = 0.01
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ConsoleSensitivityApplyButton" type="Button" parent="OptionsPanel/VBoxContainer3/VBoxContainer2"]
-margin_top = 229.0
-margin_right = 168.0
-margin_bottom = 257.0
-focus_neighbour_left = NodePath("../../../../VBoxContainer/QuitToDesktopButton")
-focus_neighbour_top = NodePath("../../VBoxContainer/PCSensitivityApplyButton")
-focus_neighbour_right = NodePath("../../../../VBoxContainer/QuitToDesktopButton")
-focus_neighbour_bottom = NodePath("../../VBoxContainer/PCSensitivityApplyButton")
-text = "APPLY"
+margin_bottom = 601.0
 [connection signal="visibility_changed" from="." to="." method="_on_MainMenu_visibility_changed"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="visibility_changed" from="GUICredits" to="." method="_on_GUICredits_visibility_changed"]
 [connection signal="pressed" from="OptionsPanel/VBoxContainer3/VBoxContainer/PCSensitivityApplyButton" to="." method="_on_PCSensitivityApplyButton_pressed"]
-[connection signal="pressed" from="OptionsPanel/VBoxContainer3/VBoxContainer2/ConsoleSensitivityApplyButton" to="." method="_on_SensitivityApplyButton_pressed"]

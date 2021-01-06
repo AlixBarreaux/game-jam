@@ -62,9 +62,10 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Game Jam"
+config/name="Terrible Mess in the Store"
 run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://Special/Hint_Item/Canned_Peas/cannedpeas.png"
+config/windows_native_icon="res://cannedpeas.ico"
 
 [autoload]
 

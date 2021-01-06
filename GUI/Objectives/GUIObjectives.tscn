@@ -30,15 +30,17 @@ margin_bottom = 157.5
 text = "(PRESS O / select / minus TO OPEN/CLOSE THIS PANEL)
 Here is what you must do to keep your job:
 
-
-
 - Close all the doors. (they are locking when closed)
 
 - Store all the items in their respecitve containers.
 
 - Turn off the Electricity.
 
-- Escape by the back entrance outside when you're done."
+- Escape by the back entrance outside when you're done.
+
+NOTE: Spam E to know where items fit if no holograms shows
+what to put in  the shelves (not only the metal ones!)
+Sorry the game is unfinished! :/"
 align = 1
 valign = 1
 __meta__ = {
