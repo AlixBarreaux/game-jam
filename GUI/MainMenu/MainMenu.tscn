@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://GUI/Buttons/QuitToDesktopButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GUI/MainMenu/main_menu.gd" type="Script" id=2]
 [ext_resource path="res://GUI/Credits/GUICredits.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/default_theme.tres" type="Theme" id=4]
 
 [sub_resource type="InputEventJoypadButton" id=1]
 button_index = 11
@@ -39,6 +40,7 @@ tracks/0/keys = {
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 4 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -150,7 +152,7 @@ anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel/VBoxContainer3"]
 margin_right = 168.0
-margin_bottom = 175.0
+margin_bottom = 207.0
 custom_constants/separation = 50
 __meta__ = {
 "_edit_use_anchors_": false
@@ -158,7 +160,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="OptionsPanel/VBoxContainer3/VBoxContainer"]
 margin_right = 168.0
-margin_bottom = 31.0
+margin_bottom = 47.0
 text = "PC
 Look Sensitivity:"
 align = 1
@@ -168,9 +170,9 @@ __meta__ = {
 }
 
 [node name="PCSpinBox" type="SpinBox" parent="OptionsPanel/VBoxContainer3/VBoxContainer"]
-margin_top = 81.0
+margin_top = 97.0
 margin_right = 168.0
-margin_bottom = 105.0
+margin_bottom = 129.0
 focus_neighbour_left = NodePath("../../../VBoxContainer/CreditsButton")
 focus_neighbour_top = NodePath("../../../VBoxContainer/PlayButton")
 focus_neighbour_right = NodePath("../../../VBoxContainer/CreditsButton")
@@ -185,9 +187,9 @@ __meta__ = {
 }
 
 [node name="PCSensitivityApplyButton" type="Button" parent="OptionsPanel/VBoxContainer3/VBoxContainer"]
-margin_top = 155.0
+margin_top = 179.0
 margin_right = 168.0
-margin_bottom = 175.0
+margin_bottom = 207.0
 focus_neighbour_left = NodePath("../../../../VBoxContainer/PlayButton")
 focus_neighbour_top = NodePath("../../VBoxContainer2/ConsoleSensitivityApplyButton")
 focus_neighbour_right = NodePath("../../../../VBoxContainer/PlayButton")
@@ -195,9 +197,9 @@ focus_neighbour_bottom = NodePath("../../VBoxContainer2/ConsoleSensitivityApplyB
 text = "APPLY"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="OptionsPanel/VBoxContainer3"]
-margin_top = 179.0
+margin_top = 211.0
 margin_right = 168.0
-margin_bottom = 388.0
+margin_bottom = 468.0
 custom_constants/separation = 50
 __meta__ = {
 "_edit_use_anchors_": false
@@ -205,7 +207,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="OptionsPanel/VBoxContainer3/VBoxContainer2"]
 margin_right = 168.0
-margin_bottom = 65.0
+margin_bottom = 97.0
 text = "
 
 Console
@@ -217,9 +219,9 @@ __meta__ = {
 }
 
 [node name="ConsoleSpinBox" type="SpinBox" parent="OptionsPanel/VBoxContainer3/VBoxContainer2"]
-margin_top = 115.0
+margin_top = 147.0
 margin_right = 168.0
-margin_bottom = 139.0
+margin_bottom = 179.0
 focus_neighbour_left = NodePath("../../../VBoxContainer/CreditsButton")
 focus_neighbour_top = NodePath("../../../VBoxContainer/PlayButton")
 focus_neighbour_right = NodePath("../../../VBoxContainer/CreditsButton")
@@ -234,9 +236,9 @@ __meta__ = {
 }
 
 [node name="ConsoleSensitivityApplyButton" type="Button" parent="OptionsPanel/VBoxContainer3/VBoxContainer2"]
-margin_top = 189.0
+margin_top = 229.0
 margin_right = 168.0
-margin_bottom = 209.0
+margin_bottom = 257.0
 focus_neighbour_left = NodePath("../../../../VBoxContainer/QuitToDesktopButton")
 focus_neighbour_top = NodePath("../../VBoxContainer/PCSensitivityApplyButton")
 focus_neighbour_right = NodePath("../../../../VBoxContainer/QuitToDesktopButton")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Static_Furnitures/Table/Table.tscn" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.40491, 0.408777, 0.705531 )
+
+[node name="StaticFurniture" type="StaticBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.659963, 0 )
+shape = SubResource( 1 )
+
+[node name="Table" parent="." instance=ExtResource( 1 )]
