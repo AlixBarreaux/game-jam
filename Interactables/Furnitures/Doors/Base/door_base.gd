@@ -61,7 +61,7 @@ func check_if_player_has_key() -> void:
 				_check_current_state()
 				break
 			else:
-				_check_current_state()
+#				_check_current_state()
 				print("The player doesn't have the key to open or close me: ", self.name)
 	else:
 		_check_current_state()

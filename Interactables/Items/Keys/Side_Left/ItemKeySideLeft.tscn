@@ -3,3 +3,4 @@
 [ext_resource path="res://Interactables/Items/Keys/Base/ItemKey.tscn" type="PackedScene" id=1]
 
 [node name="ItemKeySideLeft" instance=ExtResource( 1 )]
+id = 1
