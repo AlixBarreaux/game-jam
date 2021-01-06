@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/nicolai_heidlas_-_chill_tune.ogg-44ea7b31a16fe96eaba7754fd7cfd04e.oggstr"
+
+[deps]
+
+source_file="res://Sound/Music/nicolai_heidlas_-_chill_tune.ogg"
+dest_files=[ "res://.import/nicolai_heidlas_-_chill_tune.ogg-44ea7b31a16fe96eaba7754fd7cfd04e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

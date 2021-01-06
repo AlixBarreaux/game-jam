@@ -1,0 +1,183 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://GUI/Game_Over/gui_game_over.gd" type="Script" id=1]
+[ext_resource path="res://GUI/Buttons/QuitToDesktopButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sound/Music/kubbi_-_up_in_my_jam.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Sound/Music/bruh.wav" type="AudioStream" id=4]
+[ext_resource path="res://Special/Hint_Item/Dani_Easter_Egg/dani.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/gidolinya_regular_dynamicfont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Fonts/default_theme.tres" type="Theme" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "win_animation"
+length = 25.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel/TextureRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel/TextureRect:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0, 360.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel/TextureRect:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 4.5, 6, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel/TextureRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 7.5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 368, 156 ), Vector2( 368, 156 ), Vector2( 3000, 156 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("RichTextLabel:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -3000, 224.86 ), Vector2( 3000, 224.86 ) ]
+}
+
+[node name="GUIGameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 7 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -144.0
+margin_top = -144.0
+margin_right = 144.0
+margin_bottom = 144.0
+rect_rotation = 360.0
+rect_pivot_offset = Vector2( 144, 144 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReasonLabel" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -210.0
+margin_top = -73.5
+margin_right = 210.0
+margin_bottom = 73.5
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitToDesktopButton" parent="Panel" instance=ExtResource( 2 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 120.0
+margin_top = -116.0
+margin_right = 450.0
+margin_bottom = -65.0
+focus_neighbour_left = NodePath("../ReplayButton")
+focus_neighbour_top = NodePath("../ReplayButton")
+focus_neighbour_right = NodePath("../ReplayButton")
+focus_neighbour_bottom = NodePath("../ReplayButton")
+
+[node name="ReplayButton" type="Button" parent="Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -420.51
+margin_top = -116.0
+margin_right = -90.5095
+margin_bottom = -65.0
+focus_neighbour_left = NodePath("../QuitToDesktopButton")
+focus_neighbour_top = NodePath("../QuitToDesktopButton")
+focus_neighbour_right = NodePath("../QuitToDesktopButton")
+focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
+theme = ExtResource( 7 )
+text = "REPLAY"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="VictorySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="SoundPlayerTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="DefeatSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/win_animation = SubResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+margin_left = -1800.0
+margin_top = 224.86
+margin_right = -2663.0
+margin_bottom = 310.86
+custom_fonts/normal_font = ExtResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[wave]
+[rainbow freq=1 sat=0.5 val=1]Thank you for playing![/rainbow]"
+text = "
+Thank you for playing!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="visibility_changed" from="." to="." method="_on_GUIGameOver_visibility_changed"]
+[connection signal="timeout" from="SoundPlayerTimer" to="." method="_on_SoundPlayerTimer_timeout"]

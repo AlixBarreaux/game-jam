@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/supermarket_music_-_bit_orchestra.ogg-3fb5840823ba2d765c93a838e666c196.oggstr"
+
+[deps]
+
+source_file="res://Sound/Music/supermarket_music_-_bit_orchestra.ogg"
+dest_files=[ "res://.import/supermarket_music_-_bit_orchestra.ogg-3fb5840823ba2d765c93a838e666c196.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

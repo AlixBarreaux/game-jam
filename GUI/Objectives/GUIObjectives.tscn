@@ -1,8 +1,11 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fonts/default_theme.tres" type="Theme" id=1]
 
 [node name="GUIObjectives" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -33,7 +36,7 @@ Here is what you must do to keep your job:
 
 - Store all the items in their respecitve containers.
 
-- Turn on the Electricity.
+- Turn off the Electricity.
 
 - Escape by the back entrance outside when you're done."
 align = 1

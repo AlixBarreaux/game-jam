@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jason_farnham_-_payday.ogg-b7993db6a50cae2ef66a18ec679ace02.oggstr"
+
+[deps]
+
+source_file="res://Sound/Music/jason_farnham_-_payday.ogg"
+dest_files=[ "res://.import/jason_farnham_-_payday.ogg-b7993db6a50cae2ef66a18ec679ace02.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

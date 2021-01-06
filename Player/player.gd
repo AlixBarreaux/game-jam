@@ -133,3 +133,4 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		# Clamp camera look to avoid funky rolling
 		head.rotation.x = clamp(head.rotation.x, deg2rad(min_look_up_angle), deg2rad(max_look_up_angle))
+

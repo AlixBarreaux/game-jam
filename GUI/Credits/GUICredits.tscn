@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GUI/Credits/gui_credits.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/default_theme.tres" type="Theme" id=2]
 
 [sub_resource type="InputEventAction" id=1]
 action = "ui_cancel"
@@ -17,6 +18,7 @@ margin_left = -353.5
 margin_top = -207.0
 margin_right = 353.5
 margin_bottom = 207.0
+theme = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -40,18 +42,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -207.5
-margin_top = -124.0
-margin_right = 208.5
-margin_bottom = 125.0
+margin_left = -248.5
+margin_top = -123.5
+margin_right = 248.5
+margin_bottom = 103.5
 custom_constants/separation = 20
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
-margin_right = 416.0
-margin_bottom = 249.0
+margin_right = 497.0
+margin_bottom = 227.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
@@ -60,12 +62,12 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
-margin_right = 416.0
-margin_bottom = 222.0
+margin_right = 485.0
+margin_bottom = 402.0
 
 [node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
-margin_right = 416.0
-margin_bottom = 82.0
+margin_right = 485.0
+margin_bottom = 122.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Terrible Mess in the Store... (and the code!)
@@ -77,33 +79,41 @@ align = 3
 valign = 3
 
 [node name="GurjasStudioLinkButton" type="LinkButton" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
-margin_top = 86.0
-margin_right = 416.0
-margin_bottom = 100.0
+margin_top = 126.0
+margin_right = 485.0
+margin_bottom = 148.0
 text = "Gurjas Studio"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label2" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
-margin_top = 104.0
-margin_right = 416.0
-margin_bottom = 135.0
+margin_top = 152.0
+margin_right = 485.0
+margin_bottom = 199.0
 text = "
 Game Design / Level Design / Programming :"
 
 [node name="CtnPhacoLinkButton" type="LinkButton" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
-margin_top = 139.0
-margin_right = 416.0
-margin_bottom = 153.0
+margin_top = 203.0
+margin_right = 485.0
+margin_bottom = 225.0
 text = "CTN Phaco"
 
 [node name="Label3" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
-margin_top = 157.0
-margin_right = 416.0
-margin_bottom = 222.0
+margin_top = 229.0
+margin_right = 485.0
+margin_bottom = 276.0
+text = "
+Someone - Electric Transformer model"
+
+[node name="Label4" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 280.0
+margin_right = 485.0
+margin_bottom = 402.0
 text = "
 We have to confess, the code is a mess due to time constraints.
+Same for the project structure.
 We still hope you had fun playing this game as much as we loved
 making it together!"
 

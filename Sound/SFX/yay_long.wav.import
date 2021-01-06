@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/yay_long.wav-62de22ae42e796db6c75132f3e2b5ced.sample"
+
+[deps]
+
+source_file="res://Sound/SFX/yay_long.wav"
+dest_files=[ "res://.import/yay_long.wav-62de22ae42e796db6c75132f3e2b5ced.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

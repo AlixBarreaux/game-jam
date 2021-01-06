@@ -17,5 +17,4 @@ func on_game_won() -> void:
 
 
 func _on_DefeatTimer_timeout() -> void:
-	print("What are you doing in here?!")
-	WorldEvents.loose_game()
+	WorldEvents.loose_game("What are you doing in here?!")

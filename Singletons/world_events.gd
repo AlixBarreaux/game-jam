@@ -30,7 +30,11 @@ var is_electricity_turned_on : bool = false
 # --------------------  DECLARE SIGNALS  --------------------
 
 signal game_launched
+signal game_finished
 signal game_won
+signal game_lost
+
+signal electricity_toggled
 
 # --------------------   RUN THE CODE    --------------------
 
@@ -50,41 +54,41 @@ func check_if_all_items_are_in_storages() -> void:
 		are_all_items_stored = false
 		
 
-
 func check_if_win_conditions_met() -> void:
 	check_if_all_items_are_in_storages()
 	if not are_all_items_stored:
 		win_conditions_met = false
-		print("I have the feeling... Oh man... I forgot to store ALL the items!")
+		loose_game("You know your boss is a maniac?\nI think you forgot to store ALL the items!\nIn short: The chances of you getting fired are now 99.99% .\nJust saying!")
 		return
 
-	if not is_electricity_turned_on:
+	if is_electricity_turned_on:
 		win_conditions_met = false
-		print("Since when is there no electricity there? Are we in the stone age now?! ...")
-		print("OH NO! I have to reenable it!")
+		loose_game("I love this music... Wait you did you disable it?\nOH-MY-GOD! Good bye job!")
 		return
 
 	check_if_all_doors_closed()
 	if not are_all_doors_closed:
 		win_conditions_met = false
-		print("The doors! CLOSE ALL THE DOORS!")
+		loose_game("You didn't close ALL the doors...\nVery discrete indeed!")
 		return
 	
-	print("OH MY GOD! YOU SAVED THE DAY!!!")
-	emit_signal("game_won")
+	win_game()
 
 
-func _on_game_over() ->  void:
-	if win_conditions_met:
-		win_game()
-	else:
-		loose_game()
+#func on_game_over() ->  void:
+#	if win_conditions_met:
+#		win_game()
+#	else:
+#		loose_game()
 
 
 func win_game() -> void:
 	print("You won!")
+	emit_signal("game_won")
+	emit_signal("game_finished")
 
 
-func loose_game() -> void:
-	print("You are FIRED!")
+func loose_game(reason: String) -> void:
+	emit_signal("game_lost", reason)
+	emit_signal("game_finished")
 

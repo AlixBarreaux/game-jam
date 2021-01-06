@@ -13,4 +13,8 @@ script = ExtResource( 2 )
 [node name="Interactable" parent="." instance=ExtResource( 1 )]
 collision_layer = 4
 collision_mask = 1
+
+[node name="InteractionCoolDownTimer" type="Timer" parent="."]
+wait_time = 3.0
 [connection signal="interaction_received" from="Interactable" to="." method="_on_Interactable_interaction_received"]
+[connection signal="timeout" from="InteractionCoolDownTimer" to="." method="_on_InteractionCoolDownTimer_timeout"]
