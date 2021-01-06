@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Items/Banana/ItemBanana.tscn" type="PackedScene" id=2]
@@ -38,6 +38,14 @@
 [ext_resource path="res://Special/Hint_Item/Strawberry/HintItemStrawberry.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Interactables/Items/Keys/Side_Left/ItemKeySideLeft.tscn" type="PackedScene" id=37]
 [ext_resource path="res://Interactables/Items/Base/item.gd" type="Script" id=38]
+[ext_resource path="res://Special/Hint_Item/Baguette/HintItemBaguette.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Special/Hint_Item/Egg_Pack/HintItemEggPack.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Special/Hint_Item/Canned_Peas/HintItemCannedPeas.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Special/Hint_Item/Watermelon/HintItemWatermelon.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Special/Hint_Item/Tomato/HintItemTomato.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Special/Hint_Item/Potato/HintItemPotato.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Special/Hint_Item/Milk/HintItemMilk.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Special/Hint_Item/Carrot/HintItemCarrot.tscn" type="PackedScene" id=46]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -402,23 +410,62 @@ transform = Transform( -0.173648, 0, -0.984808, 0, 1, 0, 0.984808, 0, -0.173648,
 
 [node name="HintItems" type="Spatial" parent="."]
 
+[node name="HintItemStrawberry5" parent="HintItems" instance=ExtResource( 36 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.62695, 1.36894, -20.8132 )
+
+[node name="HintItemMilk3" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.16872, 0.787841, -12.4371 )
+
+[node name="HintItemMilk4" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90399, 0.787841, -12.4371 )
+
+[node name="HintItemMilk5" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28982, 0.787841, -12.4371 )
+
+[node name="HintItemMilk6" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45961, 0.787841, -12.4371 )
+
+[node name="HintItemMilk10" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.49307, 0.787841, -13.4206 )
+
+[node name="HintItemMilk13" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.49307, 1.34602, -13.4206 )
+
+[node name="HintItemMilk11" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.3416, 0.787841, -13.4206 )
+
+[node name="HintItemMilk12" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.3416, 1.34814, -13.4206 )
+
+[node name="HintItemMilk7" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45961, 1.40548, -12.4371 )
+
+[node name="HintItemMilk8" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33479, 1.40548, -12.4371 )
+
+[node name="HintItemMilk9" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63068, 1.40548, -12.4371 )
+
+[node name="HintItemStrawberry3" parent="HintItems" instance=ExtResource( 36 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.87803, 1.38968, -8.15907 )
+
+[node name="HintItemStrawberry4" parent="HintItems" instance=ExtResource( 36 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.87803, 1.38968, -9.78856 )
+
+[node name="HintItemEasterEgg" parent="HintItems" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.781318, 1.03265, -6.31106 )
+
 [node name="HintItemBanana" parent="HintItems" instance=ExtResource( 35 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4151, 1.18198, -8.24163 )
 
 [node name="Sprite3D" parent="HintItems/HintItemBanana" index="1"]
-transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.0434091, 0, 0.155981 )
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 1, -0.0434091, 0, 0.155981 )
 
 [node name="HintItemStrawberry" parent="HintItems" instance=ExtResource( 36 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.11131, 1.18198, -8.16695 )
 
-[node name="Sprite3D" parent="HintItems/HintItemStrawberry" index="1"]
-transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
-
 [node name="HintItemStrawberry2" parent="HintItems" instance=ExtResource( 36 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.11131, 1.18198, -9.35383 )
-
-[node name="Sprite3D" parent="HintItems/HintItemStrawberry2" index="1"]
-transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
 
 [node name="HintItemBanana2" parent="HintItems" instance=ExtResource( 35 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71436, 1.18198, -8.24163 )
@@ -432,11 +479,86 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71436, 1.18198, -9.48664 )
 [node name="Sprite3D" parent="HintItems/HintItemBanana3" index="1"]
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.0434091, 0, 0.155981 )
 
+[node name="HintItemBanana5" parent="HintItems" instance=ExtResource( 35 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.77157, 1.38547, -21.3767 )
+
+[node name="Sprite3D" parent="HintItems/HintItemBanana5" index="1"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.0434091, 0, 0.155981 )
+
 [node name="HintItemBanana4" parent="HintItems" instance=ExtResource( 35 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.33895, 1.18198, -9.48664 )
 
-[node name="HintItemEasterEgg" parent="HintItems" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.781318, 1.03265, -6.31106 )
+[node name="HintItemEggPack" parent="HintItems" instance=ExtResource( 40 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.06184, 0.662742, -17.3688 )
+
+[node name="HintItemEggPack2" parent="HintItems" instance=ExtResource( 40 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.13549, 0.662742, -17.3688 )
+
+[node name="HintItemBaguette" parent="HintItems" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.05189, 1.05357, -17.3688 )
+
+[node name="HintItemBaguette2" parent="HintItems" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.23603, 1.05357, -17.3688 )
+
+[node name="HintItemCannedPeas" parent="HintItems" instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33938, 1.33675, -16.7869 )
+
+[node name="HintItemCannedPeas3" parent="HintItems" instance=ExtResource( 41 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.13785, 1.33675, -13.3598 )
+
+[node name="HintItemCannedPeas4" parent="HintItems" instance=ExtResource( 41 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.91929, 1.33675, -13.3598 )
+
+[node name="HintItemCannedPeas2" parent="HintItems" instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.16725, 1.33675, -16.7869 )
+
+[node name="HintItemWatermelon" parent="HintItems" instance=ExtResource( 42 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.16725, 0.747722, -16.7869 )
+
+[node name="HintItemWatermelon3" parent="HintItems" instance=ExtResource( 42 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.91844, 0.747722, -13.3756 )
+
+[node name="HintItemWatermelon4" parent="HintItems" instance=ExtResource( 42 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.22327, 0.747722, -13.3756 )
+
+[node name="HintItemWatermelon2" parent="HintItems" instance=ExtResource( 42 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.34569, 0.747722, -16.7869 )
+
+[node name="HintItemTomato" parent="HintItems" instance=ExtResource( 43 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60564, 0.747722, -16.7869 )
+
+[node name="HintItemTomato2" parent="HintItems" instance=ExtResource( 43 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60564, 1.33437, -16.7869 )
+
+[node name="HintItemTomato3" parent="HintItems" instance=ExtResource( 43 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85524, 1.33437, -16.7869 )
+
+[node name="HintItemTomato4" parent="HintItems" instance=ExtResource( 43 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85524, 0.749123, -16.7869 )
+
+[node name="HintItemPotato" parent="HintItems" instance=ExtResource( 44 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.60662, 0.705399, -13.6566 )
+
+[node name="HintItemPotato2" parent="HintItems" instance=ExtResource( 44 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.60662, 0.705399, -12.2677 )
+
+[node name="HintItemPotato3" parent="HintItems" instance=ExtResource( 44 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.60662, 0.705399, -9.60176 )
+
+[node name="HintItemPotato4" parent="HintItems" instance=ExtResource( 44 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.60662, 0.705399, -8.2799 )
+
+[node name="HintItemMilk" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.60662, 1.38118, -8.2799 )
+
+[node name="HintItemMilk2" parent="HintItems" instance=ExtResource( 45 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.60662, 1.38497, -9.57257 )
+
+[node name="HintItemCarrot" parent="HintItems" instance=ExtResource( 46 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.60662, 1.38497, -13.6405 )
+
+[node name="HintItemCarrot2" parent="HintItems" instance=ExtResource( 46 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.60662, 1.38497, -12.2659 )
 
 [node name="Keys" type="Spatial" parent="."]
 
@@ -527,5 +649,7 @@ transform = Transform( 1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 23, 0 )
 [editable path="HintItems/HintItemBanana2"]
 
 [editable path="HintItems/HintItemBanana3"]
+
+[editable path="HintItems/HintItemBanana5"]
 
 [editable path="Store"]
