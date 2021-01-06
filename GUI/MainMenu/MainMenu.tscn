@@ -61,10 +61,10 @@ __meta__ = {
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
 margin_right = 324.0
 margin_bottom = 66.0
-focus_neighbour_left = NodePath(".")
+focus_neighbour_left = NodePath("../../OptionsPanel/VBoxContainer3/VBoxContainer/PCSensitivityApplyButton")
 focus_neighbour_top = NodePath("../QuitToDesktopButton")
 focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../CreditsButton")
+focus_neighbour_bottom = NodePath("../../OptionsPanel/VBoxContainer3/VBoxContainer/PCSensitivityApplyButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 shortcut = SubResource( 2 )
