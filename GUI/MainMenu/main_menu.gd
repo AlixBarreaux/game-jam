@@ -52,7 +52,13 @@ func _on_GUICredits_visibility_changed() -> void:
 
 
 
+func _on_PCSensitivityApplyButton_pressed() -> void:
+	Settings.pc_horizontal_look_sensitivity = $OptionsPanel/VBoxContainer3/VBoxContainer/PCSpinBox.value
+	Settings.pc_vertical_look_sensitivity = $OptionsPanel/VBoxContainer3/VBoxContainer/PCSpinBox.value
+	Settings.emit_signal("sensitivity_changed")
+
+
 func _on_SensitivityApplyButton_pressed() -> void:
-	Settings.horizontal_look_sensitivity = $OptionsPanel/VBoxContainer/SpinBox.value
-	Settings.vertical_look_sensitivity = $OptionsPanel/VBoxContainer/SpinBox.value
+	Settings.horizontal_look_sensitivity = $OptionsPanel/VBoxContainer3/VBoxContainer2/ConsoleSpinBox.value
+	Settings.vertical_look_sensitivity = $OptionsPanel/VBoxContainer3/VBoxContainer2/ConsoleSpinBox.value
 	Settings.emit_signal("sensitivity_changed")

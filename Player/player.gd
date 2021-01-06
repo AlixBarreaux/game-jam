@@ -8,8 +8,11 @@ class_name Player
 export var current_speed : float = 10.0
 
 # Camera
-onready var horizontal_look_sensitivity : float = Settings.horizontal_look_sensitivity
-onready var vertical_look_sensitivity : float = Settings.vertical_look_sensitivity
+onready var pc_horizontal_look_sensitivity : float = Settings.pc_horizontal_look_sensitivity
+onready var pc_vertical_look_sensitivity : float = Settings.pc_vertical_look_sensitivity
+
+onready var console_horizontal_look_sensitivity : float = Settings.console_horizontal_look_sensitivity
+onready var console_vertical_look_sensitivity : float = Settings.console_vertical_look_sensitivity
 
 # Camera
 var min_look_up_angle : int = -90
@@ -38,14 +41,29 @@ func _ready() -> void:
 	# warning-ignore: return_value_discarded
 
 	initialize_asserts()
-	Settings.connect("sensitivity_changed", self, "on_sensitivity_changed")
+	Settings.connect("pc_sensitivity_changed", self, "on_pc_sensitivity_changed")
+	Settings.connect("console_sensitivity_changed", self, "on_console_sensitivity_changed")
 
 #	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
-func _physics_process(_delta : float) -> void:
+func _physics_process(delta : float) -> void:
 	self.move_and_slide(velocity, Vector3.UP)
 
+	if inputs_enabled:
+		# Experimental. Might not work since it was not tested (no controller owned)
+		# Controller Inputs
+		if Input.is_action_pressed("look_left"):
+			self.rotate_y(deg2rad(1 * console_horizontal_look_sensitivity * delta))
+
+		if Input.is_action_pressed("look_right"):
+			self.rotate_y(deg2rad(-1 * console_horizontal_look_sensitivity * delta))
+			
+		if Input.is_action_pressed("look_up"):
+			head.rotate_x(deg2rad(1 * console_vertical_look_sensitivity * delta))
+			
+		if Input.is_action_pressed("look_down"):
+			head.rotate_x(deg2rad(-1 * console_vertical_look_sensitivity * delta))
 
 
 # -------------------- DECLARE FUNCTIONS --------------------
@@ -54,8 +72,8 @@ func initialize_asserts() -> void:
 	# Movement
 	assert(current_speed > 0)
 
-	assert(horizontal_look_sensitivity > 0.0)
-	assert(vertical_look_sensitivity > 0.0)
+	assert(pc_horizontal_look_sensitivity > 0.0)
+	assert(pc_vertical_look_sensitivity > 0.0)
 
 	assert(min_look_up_angle != 0)
 	assert(max_look_up_angle != 0)
@@ -130,31 +148,20 @@ func _unhandled_input(event: InputEvent) -> void:
 	# CHECK ALSO IF CURSOR SHOWN? If a GUI menu is opened
 	if event is InputEventMouseMotion:
 		# Look Left/Right
-		self.rotate_y(deg2rad(-event.relative.x * horizontal_look_sensitivity))
+		self.rotate_y(deg2rad(-event.relative.x * pc_horizontal_look_sensitivity))
 		# Look Up/Down
-		head.rotate_x(deg2rad(-event.relative.y * vertical_look_sensitivity))
+		head.rotate_x(deg2rad(-event.relative.y * pc_vertical_look_sensitivity))
 
 		# Clamp camera look to avoid funky rolling
 		head.rotation.x = clamp(head.rotation.x, deg2rad(min_look_up_angle), deg2rad(max_look_up_angle))
 
 
 
-	# Experimental. Might not work since it was not tested (no controller owned)
-	# Controller Inputs
-	if Input.is_action_pressed("look_left"):
-		self.rotate_y(deg2rad(1 * horizontal_look_sensitivity))
-
-	if Input.is_action_pressed("look_right"):
-		self.rotate_y(deg2rad(-1 * horizontal_look_sensitivity))
-		
-	if Input.is_action_pressed("look_up"):
-		head.rotate_x(deg2rad(1 * vertical_look_sensitivity))
-		
-	if Input.is_action_pressed("look_down"):
-		head.rotate_x(deg2rad(-1 * vertical_look_sensitivity))
+func on_pc_sensitivity_changed() -> void:
+	self.pc_horizontal_look_sensitivity = Settings.pc_horizontal_look_sensitivity
+	self.pc_vertical_look_sensitivity = Settings.pc_vertical_look_sensitivity
 
 
-func on_sensitivity_changed() -> void:
-	self.horizontal_look_sensitivity = Settings.horizontal_look_sensitivity
-	self.vertical_look_sensitivity = Settings.vertical_look_sensitivity
-
+func on_console_sensitivity_changed() -> void:
+	self.console_horizontal_look_sensitivity = Settings.console__horizontal_look_sensitivity
+	self.console__vertical_look_sensitivity = Settings.console__vertical_look_sensitivity

@@ -61,8 +61,10 @@ __meta__ = {
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
 margin_right = 324.0
 margin_bottom = 66.0
-focus_neighbour_left = NodePath("../QuitToDesktopButton")
+focus_neighbour_left = NodePath("../../OptionsPanel/VBoxContainer/SensitivityApplyButton")
 focus_neighbour_top = NodePath("../QuitToDesktopButton")
+focus_neighbour_right = NodePath("../../OptionsPanel/VBoxContainer/SensitivityApplyButton")
+focus_neighbour_bottom = NodePath("../CreditsButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 shortcut = SubResource( 2 )
@@ -75,7 +77,9 @@ __meta__ = {
 margin_top = 126.0
 margin_right = 324.0
 margin_bottom = 192.0
+focus_neighbour_left = NodePath("../../OptionsPanel/VBoxContainer/SensitivityApplyButton")
 focus_neighbour_top = NodePath("../PlayButton")
+focus_neighbour_right = NodePath("../../OptionsPanel/VBoxContainer/SensitivityApplyButton")
 focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -86,7 +90,9 @@ text = "CREDITS"
 margin_top = 252.0
 margin_right = 324.0
 margin_bottom = 318.0
+focus_neighbour_left = NodePath("../../OptionsPanel/VBoxContainer/SensitivityApplyButton")
 focus_neighbour_top = NodePath("../CreditsButton")
+focus_neighbour_right = NodePath("../../OptionsPanel/VBoxContainer/SensitivityApplyButton")
 focus_neighbour_bottom = NodePath("../PlayButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -130,40 +136,96 @@ anims/VersionLabelAlphaModulate = SubResource( 7 )
 visible = false
 
 [node name="OptionsPanel" type="Panel" parent="."]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 74.0
-margin_top = -79.5
-margin_right = 233.0
-margin_bottom = 79.5
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 198.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="OptionsPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel/VBoxContainer3"]
+margin_right = 168.0
+margin_bottom = 175.0
 custom_constants/separation = 50
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="OptionsPanel/VBoxContainer"]
-margin_right = 159.0
-margin_bottom = 14.0
-text = "Look Sensitivity:"
+[node name="Label" type="Label" parent="OptionsPanel/VBoxContainer3/VBoxContainer"]
+margin_right = 168.0
+margin_bottom = 31.0
+text = "PC
+Look Sensitivity:"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SpinBox" type="SpinBox" parent="OptionsPanel/VBoxContainer"]
-margin_top = 64.0
-margin_right = 159.0
-margin_bottom = 88.0
+[node name="PCSpinBox" type="SpinBox" parent="OptionsPanel/VBoxContainer3/VBoxContainer"]
+margin_top = 81.0
+margin_right = 168.0
+margin_bottom = 105.0
+focus_neighbour_left = NodePath("../../../VBoxContainer/CreditsButton")
+focus_neighbour_top = NodePath("../../../VBoxContainer/PlayButton")
+focus_neighbour_right = NodePath("../../../VBoxContainer/CreditsButton")
+focus_neighbour_bottom = NodePath("../SensitivityApplyButton")
+min_value = 0.001
+max_value = 1.0
+step = 0.1
+value = 0.001
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PCSensitivityApplyButton" type="Button" parent="OptionsPanel/VBoxContainer3/VBoxContainer"]
+margin_top = 155.0
+margin_right = 168.0
+margin_bottom = 175.0
+focus_neighbour_left = NodePath("../../../VBoxContainer/PlayButton")
+focus_neighbour_top = NodePath("../SpinBox")
+focus_neighbour_right = NodePath("../../../VBoxContainer/PlayButton")
+focus_neighbour_bottom = NodePath("../../../VBoxContainer/QuitToDesktopButton")
+text = "APPLY"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="OptionsPanel/VBoxContainer3"]
+margin_top = 179.0
+margin_right = 168.0
+margin_bottom = 388.0
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="OptionsPanel/VBoxContainer3/VBoxContainer2"]
+margin_right = 168.0
+margin_bottom = 65.0
+text = "
+
+Console
+Look Sensitivity:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConsoleSpinBox" type="SpinBox" parent="OptionsPanel/VBoxContainer3/VBoxContainer2"]
+margin_top = 115.0
+margin_right = 168.0
+margin_bottom = 139.0
+focus_neighbour_left = NodePath("../../../VBoxContainer/CreditsButton")
+focus_neighbour_top = NodePath("../../../VBoxContainer/PlayButton")
+focus_neighbour_right = NodePath("../../../VBoxContainer/CreditsButton")
+focus_neighbour_bottom = NodePath("../SensitivityApplyButton")
 min_value = 0.01
-max_value = 1000.0
+max_value = 6.0
 step = 0.1
 value = 0.01
 align = 1
@@ -171,14 +233,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SensitivityApplyButton" type="Button" parent="OptionsPanel/VBoxContainer"]
-margin_top = 138.0
-margin_right = 159.0
-margin_bottom = 158.0
+[node name="ConsoleSensitivityApplyButton" type="Button" parent="OptionsPanel/VBoxContainer3/VBoxContainer2"]
+margin_top = 189.0
+margin_right = 168.0
+margin_bottom = 209.0
+focus_neighbour_left = NodePath("../../../VBoxContainer/PlayButton")
+focus_neighbour_top = NodePath("../SpinBox")
+focus_neighbour_right = NodePath("../../../VBoxContainer/PlayButton")
+focus_neighbour_bottom = NodePath("../../../VBoxContainer/QuitToDesktopButton")
 text = "APPLY"
 [connection signal="visibility_changed" from="." to="." method="_on_MainMenu_visibility_changed"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="visibility_changed" from="GUICredits" to="." method="_on_GUICredits_visibility_changed"]
-[connection signal="pressed" from="OptionsPanel/VBoxContainer/SensitivityApplyButton" to="." method="_on_SensitivityApplyButton_pressed"]
+[connection signal="pressed" from="OptionsPanel/VBoxContainer3/VBoxContainer/PCSensitivityApplyButton" to="." method="_on_PCSensitivityApplyButton_pressed"]
+[connection signal="pressed" from="OptionsPanel/VBoxContainer3/VBoxContainer2/ConsoleSensitivityApplyButton" to="." method="_on_SensitivityApplyButton_pressed"]
