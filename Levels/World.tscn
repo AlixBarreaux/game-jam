@@ -373,9 +373,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.69707, 0.853947, -8.16516 )
 [node name="StorageWatermelon" parent="Storages" instance=ExtResource( 28 )]
 transform = Transform( 1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 4.06447, 1.04647, -8.51782 )
 
-[node name="ItemSpot" parent="Storages/StorageWatermelon" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
 [node name="StoragePotato" parent="Storages" instance=ExtResource( 29 )]
 transform = Transform( 1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 4.68465, 1.04647, -8.51782 )
 
