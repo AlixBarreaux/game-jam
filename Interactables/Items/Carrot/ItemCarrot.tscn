@@ -3,11 +3,11 @@
 [ext_resource path="res://Interactables/Items/Base/Item.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Items/Carrot/Carrot.tscn" type="PackedScene" id=2]
 
-[sub_resource type="CapsuleShape" id=2]
+[sub_resource type="CapsuleShape" id=1]
 radius = 0.0320559
 height = 0.08133
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.0682325, 0.0200617, 0.0261939 )
 
 [node name="ItemCarrot" instance=ExtResource( 1 )]
@@ -18,14 +18,14 @@ transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.00448449, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
 transform = Transform( -6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 0.0101881, 0.0273851, 0 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="InteractableZone" index="0"]
 transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.00828352, -0.0726149, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }

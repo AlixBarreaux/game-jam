@@ -28,6 +28,9 @@ onready var player = world.get_node("Player")
 
 # --------------------  DECLARE SIGNALS  --------------------
 
+signal item_picked_up
+signal item_removed
+
 # --------------------   RUN THE CODE    --------------------
 
 # -------------------- DECLARE FUNCTIONS --------------------
@@ -43,6 +46,7 @@ func pickup_item(item) -> bool:
 	else:
 		current_item_amount += 1
 		add_item(item)
+		emit_signal("item_picked_up")
 		return true
 
 
@@ -80,6 +84,7 @@ func drop_item() -> void:
 		world_items_node.add_child(instance)
 		print(instance)
 		
+		emit_signal("item_removed")
 		carried_items_ids.remove(carried_items_ids.size() - 1)
 		current_item_amount -= 1
 
@@ -87,6 +92,7 @@ func drop_item() -> void:
 # Delete item without dropping it into the world
 func remove_item_from_inventory(index: int) -> void:
 	print("Before change: ", carried_items_ids)
+	emit_signal("item_removed")
 	carried_items_ids.remove(index)
 	current_item_amount -= 1
 	print("Remove in singleton! Carried item ids: ", carried_items_ids)

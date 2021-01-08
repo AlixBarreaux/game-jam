@@ -13,10 +13,9 @@ __meta__ = {
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 142.0
-margin_top = 83.0
-margin_right = -143.0
-margin_bottom = -84.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="DescriptionLabel" type="Label" parent="Panel"]
 anchor_right = 1.0
@@ -24,18 +23,18 @@ anchor_bottom = 1.0
 text = "(PRESS O / select / minus TO OPEN/CLOSE THIS PANEL)
 Here is what you must do to keep your job:
 
+- Escape by the stairs ONLY when you are 100% sure
+you are done, otherwise your boss will tell you one or 2 things!
+
 - Close all the doors. (they are locking when closed)
+[Double door is bugged so it's not counted!]
 
 - Store all the items in their respecitve containers.
 
 - Turn off the Electricity.
 
-- Escape by the back entrance outside when you're done.
-
-NOTE: Spam E to know where items fit if no holograms shows
-what to put in  the shelves (not only the metal ones!)
-Sorry the game is unfinished! :/
-Each key opens a specific door. If a door doesn't open, search for another key!"
+Each key opens a specific door. If a door doesn't open, search for another key, there is just
+no sound if it's locked!"
 align = 1
 valign = 1
 __meta__ = {

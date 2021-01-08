@@ -62,10 +62,10 @@ __meta__ = {
 [node name="GUITimer" type="Timer" parent="."]
 
 [node name="DefeatTimer" parent="." instance=ExtResource( 1 )]
-wait_time = 900.0
+wait_time = 800.0
 
 [node name="FewTimeLeftTimer" type="Timer" parent="."]
-wait_time = 800.0
+wait_time = 168.75
 
 [node name="FewTimeLeftSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )

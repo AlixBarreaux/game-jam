@@ -14,7 +14,6 @@ transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.09039, 0 )
 shape = SubResource( 1 )
 
 [node name="CannedPeas" parent="." index="1" instance=ExtResource( 2 )]
-transform = Transform( -6.55671e-09, 0, -0.15, 0, 0.15, 0, 0.15, 0, -6.55671e-09, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="InteractableZone" index="0"]
 transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.00961, 0 )

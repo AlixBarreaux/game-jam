@@ -10,6 +10,7 @@ radius = 0.113833
 radius = 0.193695
 
 [node name="ItemWatermelon" instance=ExtResource( 1 )]
+transform = Transform( 1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0 )
 id = 8
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
@@ -17,6 +18,7 @@ transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.12
 shape = SubResource( 1 )
 
 [node name="Watermelon" parent="." index="1" instance=ExtResource( 2 )]
+transform = Transform( 1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="InteractableZone" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0208629, 0 )

@@ -50,21 +50,6 @@ func _ready() -> void:
 func _physics_process(delta : float) -> void:
 	self.move_and_slide(velocity, Vector3.UP)
 
-	if inputs_enabled:
-		# Experimental. Might not work since it was not tested (no controller owned)
-		# Controller Inputs
-		if Input.is_action_pressed("look_left"):
-			self.rotate_y(deg2rad(1 * console_horizontal_look_sensitivity * delta))
-
-		if Input.is_action_pressed("look_right"):
-			self.rotate_y(deg2rad(-1 * console_horizontal_look_sensitivity * delta))
-			
-		if Input.is_action_pressed("look_up"):
-			head.rotate_x(deg2rad(1 * console_vertical_look_sensitivity * delta))
-			
-		if Input.is_action_pressed("look_down"):
-			head.rotate_x(deg2rad(-1 * console_vertical_look_sensitivity * delta))
-
 
 # -------------------- DECLARE FUNCTIONS --------------------
 

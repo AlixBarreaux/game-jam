@@ -64,6 +64,7 @@ surfaces/0 = {
 }
 
 [node name="Tomato" type="MeshInstance"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 
