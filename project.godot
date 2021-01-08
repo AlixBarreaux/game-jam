@@ -73,6 +73,10 @@ Settings="*res://Singletons/settings.gd"
 PlayerItemList="*res://Singletons/player_item_list.gd"
 WorldEvents="*res://Singletons/world_events.gd"
 
+[display]
+
+window/size/fullscreen=true
+
 [input]
 
 move_left={
